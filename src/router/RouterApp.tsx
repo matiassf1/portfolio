@@ -1,14 +1,11 @@
-import { ChakraProvider } from "@chakra-ui/react";
+import { ChakraProvider, Heading } from '@chakra-ui/react';
 import { Route, Routes } from "react-router-dom";
-import { LoginPage } from "../login/LoginPage";
-import { HomePage } from "../portfolio/HomePage";
 import { extendTheme } from "@chakra-ui/react";
+import { HomePage } from '../HomePage';
 
 interface IRouterApp {}
 
-
-// 2. Call `extendTheme` and pass your custom values
-const theme = extendTheme({
+export const theme = extendTheme({
   colors: {
     primary: {
       50: 'a8dadc',
@@ -18,17 +15,18 @@ const theme = extendTheme({
     alert: 'e63946'
   },
   fonts: {
+    heading: 'Bungee Shade',
     body: 'Martian Mono'
   }
 
 });
+
 export const RouterApp: React.FunctionComponent<IRouterApp> = () => {
   return (
     <ChakraProvider theme={theme}>
       <Routes>
         <Route path="/home" element={<HomePage />} />
         <Route path="/*" element={<HomePage />} />
-        <Route path="/auth" element={<LoginPage />} />
       </Routes>
     </ChakraProvider>
   );

@@ -1,12 +1,14 @@
-import { Box, Button, ButtonGroup, Flex, Heading, Image, Spacer } from "@chakra-ui/react";
+import { Box, Flex, Heading, Image, Code, Stack } from "@chakra-ui/react";
 import { NavBar } from "./ui/NavBar";
 
 interface IHomePage {}
 
 export const HomePage: React.FunctionComponent<IHomePage> = () => {
   return (
-    <Box display="flex" flexDirection='column' fontFamily={"monospace"}>
-      <NavBar />
+    <Box display="flex" flexDirection="column">
+      <Box fontFamily={"monospace"}>
+        <NavBar />
+      </Box>
 
       <Flex
         minWidth="max-content"
@@ -23,6 +25,12 @@ export const HomePage: React.FunctionComponent<IHomePage> = () => {
         />
         <Heading>Front-End Developer</Heading>
       </Flex>
+
+      <Stack direction="row" justify="center" padding='20px'>
+        <Code colorScheme='green' children="console.log(welcome!!)" />
+        <Code colorScheme="red" children="const myFullName = 'Sfer Matias Gabriel'" />
+        <Code colorScheme="yellow" children="yarn add good-vibes@latest" />
+      </Stack>
     </Box>
   );
 };
