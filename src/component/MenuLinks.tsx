@@ -20,8 +20,8 @@ export const MenuLinks: React.FunctionComponent<IMenuLinks> = ({isOpen}) => {
         pt={[4, 4, 0, 0]}
       >
         <MenuItem to="/">Home</MenuItem>
-        <MenuItem to="/how">About Me</MenuItem>
-        <MenuItem to="/how">Portfolio</MenuItem>
+        <MenuItem to="/about">About Me</MenuItem>
+        <MenuItem to="/projects">Projects</MenuItem>
       </Stack>
     </Box>
   );

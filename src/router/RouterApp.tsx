@@ -1,7 +1,9 @@
 import { ChakraProvider, Heading } from '@chakra-ui/react';
 import { Route, Routes } from "react-router-dom";
 import { extendTheme } from "@chakra-ui/react";
-import { HomePage } from '../HomePage';
+import { AboutPage } from '../pages/AboutPage';
+import { HomePage } from '../pages/HomePage';
+import { Projects } from '../pages/Projects';
 
 interface IRouterApp {}
 
@@ -17,15 +19,18 @@ export const theme = extendTheme({
   fonts: {
     heading: 'Bungee Shade',
     body: 'Martian Mono'
-  }
-
+  },
 });
 
 export const RouterApp: React.FunctionComponent<IRouterApp> = () => {
   return (
     <ChakraProvider theme={theme}>
       <Routes>
-        <Route path="/home" element={<HomePage />} />
+        <Route path="/" element={<HomePage />} >
+          <Route path='projects' element={<Projects />}/>
+        </Route>
+        
+        <Route path="/about" element={<AboutPage />} />
         <Route path="/*" element={<HomePage />} />
       </Routes>
     </ChakraProvider>

@@ -11,7 +11,7 @@ export const MenuItem: React.FunctionComponent<IMenuItem> = ({
 }) => {
   return (
     <Link href={to}>
-      <Button display="block" fontSize="lg" fontWeight="semibold" colorScheme={'gray'} variant="ghost">
+      <Button display="block" fontSize="lg" borderTopStartRadius='full' borderBottomEndRadius='full' fontWeight="semibold" colorScheme={'gray'} variant="ghost">
         {children}
       </Button>
     </Link>
