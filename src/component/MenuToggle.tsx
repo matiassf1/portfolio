@@ -9,8 +9,8 @@ interface IMenuToggle {
 
 export const MenuToggle: React.FunctionComponent<IMenuToggle> = ({ toggle, isOpen }) => {
   return (
-    <Box display={{ base: "block", md: "none"}} cursor='pointer' onClick={toggle}  _hover={{ fontSize: '15px' }}>
-      {false ? <SlClose /> : <SlMenu color="white" />}
+    <Box display={{ base: "block", md: "none"}} cursor='pointer' onClick={toggle} style={{ padding: '8px' }} fontSize='15px' _hover={{ fontSize: '20px' }}>
+      {isOpen ? <SlClose color="#F24B4B" /> : <SlMenu color="#F24B4B" />}
     </Box>
   )
 }

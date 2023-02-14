@@ -3,7 +3,7 @@ import { Box, Text } from "@chakra-ui/react"
 
 interface ILogo {
       w: string,
-      color: string[]
+      color: string
 }
 
 export const Logo: React.FunctionComponent<ILogo> = ({w, color}) => {

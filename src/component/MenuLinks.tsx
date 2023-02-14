@@ -17,11 +17,11 @@ export const MenuLinks: React.FunctionComponent<IMenuLinks> = ({isOpen}) => {
         align="center"
         justify={["center", "space-between", "flex-end", "flex-end"]}
         direction={["column", "row", "row", "row"]}
-        pt={[4, 4, 0, 0]}
+        pt={[3, 3, 0, 0]}
       >
         <MenuItem to="/">Home</MenuItem>
         <MenuItem to="/about">About Me</MenuItem>
-        <MenuItem to="/projects">Projects</MenuItem>
+        <MenuItem to="#projects">Projects</MenuItem>
       </Stack>
     </Box>
   );

@@ -10,9 +10,13 @@ interface IRouterApp {}
 export const theme = extendTheme({
   colors: {
     primary: {
-      50: 'a8dadc',
-      100: '457b9d',
-      500: '1d3557'
+      100: '#011C40',
+    },
+    secondary: {
+      100: '#0477BF'
+    },
+    terciary: {
+      100: '#A60321'
     },
     alert: 'e63946'
   },
@@ -20,6 +24,7 @@ export const theme = extendTheme({
     heading: 'Bungee Shade',
     body: 'Martian Mono'
   },
+
 });
 
 export const RouterApp: React.FunctionComponent<IRouterApp> = () => {
@@ -27,7 +32,8 @@ export const RouterApp: React.FunctionComponent<IRouterApp> = () => {
     <ChakraProvider theme={theme}>
       <Routes>
         <Route path="/" element={<HomePage />} >
-          <Route path='projects' element={<Projects />}/>
+          {/* <Route path='projects' element={<Projects />}/> Nested Routes incoming
+                                                          about specific project and info */}
         </Route>
         
         <Route path="/about" element={<AboutPage />} />

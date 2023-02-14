@@ -12,13 +12,16 @@ export const NavBarContainer: React.FunctionComponent<INavBarContainer> = ({ chi
       <Flex
         as="nav"
         align="center"
+        position='fixed'
+        top='0'
         justify="space-between"
         wrap="wrap"
         w="100%"
         mb={8}
-        p={8}
-        bg={["blue.700", "blue.700", "transparent", "transparent"]}
-        color={["blackAlpha.700", "blackAlpha.700", "blue.700", "blue.700"]}
+        p={7}
+        pb={3}
+        bg={'white'}
+        color={["blackAlpha.700", "blackAlpha.700", "#F26D6D", "#F26D6D"]}
         {...props}
       >
         {children}
