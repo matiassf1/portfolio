@@ -10,7 +10,7 @@ export const MenuItem: React.FunctionComponent<IMenuItem> = ({
   to = "/",
 }) => {
   return (
-    <Link href={to}>
+    <Link href={to} style={{ textDecoration: 'none' }}>
       <Button display="block" fontSize="lg" borderTopStartRadius='full' borderBottomEndRadius='full' fontWeight="semibold" colorScheme={'gray'} variant="ghost">
         {children}
       </Button>
