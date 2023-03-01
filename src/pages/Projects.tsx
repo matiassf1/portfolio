@@ -1,24 +1,12 @@
-import { Box, ScaleFade } from "@chakra-ui/react";
-import React, { useRef } from "react";
-import { useInViewport } from "react-in-viewport";
-import { useNavigate } from "react-router-dom";
+import { Box, } from "@chakra-ui/react";
+import React, {  } from "react";
 
 interface IProjects {}
 
 export const Projects: React.FunctionComponent<IProjects> = () => {
-  const ref = useRef(null);
-  const navigate = useNavigate();
-
-  const { inViewport, enterCount } = useInViewport(
-    ref,
-    { rootMargin: "-200px" },
-    { disconnectOnLeave: false },
-    {}
-  );
 
   return (
-    <ScaleFade initialScale={0.9} in={enterCount > 0}>
-      <Box id="projects" h="100vh" w="full" ref={ref} bgColor="#141F26" style={{scrollSnapAlign: 'center'}}>
+      <Box color={'white'}>
         <h2>My Stack</h2>
         <ul>
           <li>React</li>
@@ -30,6 +18,5 @@ export const Projects: React.FunctionComponent<IProjects> = () => {
           <li>Tailwindcss</li>
         </ul>
       </Box>
-    </ScaleFade>
   );
 };
