@@ -1,9 +1,12 @@
 {
   "compilerOptions": {
-    "composite": true,
-    "module": "ESNext",
-    "moduleResolution": "Node",
-    "allowSyntheticDefaultImports": true
+    "module": "commonjs",
+    "target": "es2020",
+    "esModuleInterop": true
   },
-  "include": ["vite.config.ts"]
+  "include": [
+    "vite.config.ts",
+    "src/**/*.ts"
+  ],
+  "exclude": []
 }

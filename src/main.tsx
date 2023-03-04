@@ -3,10 +3,14 @@ import ReactDOM from "react-dom/client";
 import { RouterApp } from "./router/RouterApp";
 import { BrowserRouter } from "react-router-dom";
 
-ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
+const container: HTMLElement | Element = document.querySelector("#root")!;
+
+const root = ReactDOM.createRoot(container);
+
+root.render(
   <React.StrictMode>
     <BrowserRouter>
-        <RouterApp />
+      <RouterApp />
     </BrowserRouter>
   </React.StrictMode>
 );

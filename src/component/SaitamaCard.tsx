@@ -1,11 +1,12 @@
 import React from "react";
-import { Box, Text } from "@chakra-ui/react";
+import { Box, Text, } from "@chakra-ui/react";
 
 interface ISaitamaCard {}
 
 const SaitamaCard: React.FunctionComponent<ISaitamaCard> = () => {
   return (
-    <Box
+
+          <Box
       display={"grid"}
       gridTemplateColumns={"40% auto"}
       w={"450px"}

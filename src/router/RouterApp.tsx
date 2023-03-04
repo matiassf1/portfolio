@@ -1,9 +1,10 @@
 import { ChakraProvider, Heading } from '@chakra-ui/react';
 import { Route, Routes } from "react-router-dom";
-import { extendTheme } from "@chakra-ui/react";
+import { extendTheme, Box } from "@chakra-ui/react";
 import { AboutPage } from '../pages/AboutPage';
 import { HomePage } from '../pages/HomePage';
 import { Projects } from '../pages/Projects';
+import { NavBar } from '../ui/NavBar';
 
 interface IRouterApp {}
 
@@ -30,6 +31,10 @@ export const theme = extendTheme({
 export const RouterApp: React.FunctionComponent<IRouterApp> = () => {
   return (
     <ChakraProvider theme={theme}>
+
+        <Box fontFamily={"monospace"}>
+          <NavBar />
+        </Box>
       <Routes>
         <Route path="/" element={<HomePage />} >
           {/* <Route path='projects' element={<Projects />}/> Nested Routes incoming

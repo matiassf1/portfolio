@@ -9,10 +9,11 @@ import {
 } from "@chakra-ui/react";
 import { useRef } from "react";
 import { useInViewport } from "react-in-viewport";
-import { useNavigate } from "react-router-dom";
+import { Outlet, useNavigate } from "react-router-dom";
 import { NavBar } from "../ui/NavBar";
 import { Projects } from "./Projects";
 import SaitamaCard from "../component/SaitamaCard";
+import { MyStack } from "../component/MyStack";
 
 interface IHomePage {}
 
@@ -37,9 +38,7 @@ export const HomePage: React.FunctionComponent<IHomePage> = () => {
         h="100vh"
         w="full"
       >
-        <Box fontFamily={"monospace"}>
-          <NavBar />
-        </Box>
+        <Outlet />
 
         <Flex
           minWidth="max-content"
@@ -96,12 +95,13 @@ export const HomePage: React.FunctionComponent<IHomePage> = () => {
           bgColor="#1B1F26"
           scrollSnapAlign={"center"}
           display="flex"
+          gap={'20'}
           alignItems={"center"}
           justifyContent="space-evenly"
           flexDirection={"row"}
         >
           <SaitamaCard />
-          <Projects />
+          <MyStack />
         </Box>
       </ScaleFade>
     </>
