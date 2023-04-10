@@ -100,7 +100,7 @@ export const HomePage: React.FunctionComponent<IHomePage> = () => {
           justifyContent="space-evenly"
           flexDirection={"row"}
         >
-          <SaitamaCard />
+          <SaitamaCard  />
           <MyStack />
         </Box>
       </ScaleFade>

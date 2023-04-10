@@ -1,18 +1,20 @@
 import React from "react";
 import { Box, Text, } from "@chakra-ui/react";
 
-interface ISaitamaCard {}
+interface ISaitamaCard {
+  width?: string
+}
 
-const SaitamaCard: React.FunctionComponent<ISaitamaCard> = () => {
+const SaitamaCard: React.FunctionComponent<ISaitamaCard> = ({ width = "17vh" }) => {
   return (
 
           <Box
       display={"grid"}
       gridTemplateColumns={"40% auto"}
-      w={"450px"}
-      h={"300px"}
+      w={["150px","300px","450px"]}
+      h={["100px","200px","300px"]}
       bg={"#303240"}
-      gap={"3"}
+      gap={["1","2","3"]}
       alignItems={"center"}
       placeItems="center"
       rounded="xl"
