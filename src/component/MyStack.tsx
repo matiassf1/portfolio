@@ -17,6 +17,7 @@ export const MyStack: React.FunctionComponent<IMyStack> = () => {
       justify={"center"}
       placeContent={"center"}
       placeItems="center"
+      w={["80%", "80%", "auto", "auto"]}
     >
       <Heading size={"md"}>My Stack</Heading>
 
@@ -26,13 +27,15 @@ export const MyStack: React.FunctionComponent<IMyStack> = () => {
         display={"flex"}
         justifyContent="center"
         alignItems={"center"}
+        h={{ base: "300px", md: "350px" }}
+        w={{ base: "300px", md: "350px" }}
       >
         <motion.div
           style={{
             opacity: "1",
             background: "#303240",
-            width: "500px",
-            height: "400px",
+            height: "100%",
+            width: "100%",
             borderRadius: "20px",
             top: "calc(50% - 100px)",
             left: "calc(50% - 100px)",
@@ -55,7 +58,7 @@ export const MyStack: React.FunctionComponent<IMyStack> = () => {
               }}
               top={["calc(50% - 100px / 2)"]}
               left={["calc(50% - 70px / 2)"]}
-              boxSize={"90px"}
+              boxSize={"70px"}
               objectFit="fill"
               draggable="false"
               src={image.default.css}
@@ -68,7 +71,7 @@ export const MyStack: React.FunctionComponent<IMyStack> = () => {
               }}
               top={["calc(50% - 100px / 2)"]}
               left={["calc(50% - 70px / 2)"]}
-              boxSize={"90px"}
+              boxSize={"70px"}
               objectFit="cover"
               draggable="false"
               src={image.default.tailwind}
@@ -81,7 +84,7 @@ export const MyStack: React.FunctionComponent<IMyStack> = () => {
               }}
               top={["calc(50% - 100px / 2)"]}
               left={["calc(50% - 70px / 2)"]}
-              boxSize={"90px"}
+              boxSize={"70px"}
               objectFit="fill"
               draggable="false"
               src={image.default.bootstrap}
@@ -92,7 +95,7 @@ export const MyStack: React.FunctionComponent<IMyStack> = () => {
         />
 
         <motion.div
-          style={{ position: "absolute", top: "auto", margin: "30pxx" }}
+          style={{ position: "absolute", top: "auto", margin: "30px" }}
           children={[
             <Img
               style={{
@@ -101,7 +104,7 @@ export const MyStack: React.FunctionComponent<IMyStack> = () => {
               }}
               top={["calc(50% - 100px / 2)"]}
               right={["calc(50% - 90px / 2)"]}
-              boxSize={"90px"}
+              boxSize={"70px"}
               objectFit="fill"
               draggable="false"
               src={image.default.javascript}
@@ -114,7 +117,7 @@ export const MyStack: React.FunctionComponent<IMyStack> = () => {
               }}
               top={["calc(50% - 100px / 2)"]}
               right={["calc(50% - 90px / 2)"]}
-              boxSize={"90px"}
+              boxSize={"70px"}
               objectFit="cover"
               draggable="false"
               src={image.default.react}
@@ -127,7 +130,7 @@ export const MyStack: React.FunctionComponent<IMyStack> = () => {
               }}
               top={["calc(50% - 100px / 2)"]}
               right={["calc(50% - 90px / 2)"]}
-              boxSize={"90px"}
+              boxSize={"70px"}
               objectFit="fill"
               draggable="false"
               src={image.default.typescript}
@@ -153,7 +156,7 @@ export const MyStack: React.FunctionComponent<IMyStack> = () => {
               }}
               top={["calc(50% - 100px / 2)"]}
               right={["calc(50% - 70px / 2)"]}
-              boxSize={"90px"}
+              boxSize={"70px"}
               objectFit="fill"
               draggable="false"
               src={image.default.html}
@@ -166,7 +169,7 @@ export const MyStack: React.FunctionComponent<IMyStack> = () => {
               }}
               top={["calc(50% - 100px / 2)"]}
               right={["calc(50% - 70px / 2)"]}
-              boxSize={"90px"}
+              boxSize={"70px"}
               objectFit="fill"
               draggable="false"
               src={image.default.apirest}
@@ -181,15 +184,14 @@ export const MyStack: React.FunctionComponent<IMyStack> = () => {
                 }}
                 top={["calc(50% - 100px / 2)"]}
                 right={["calc(50% - 70px / 2)"]}
-                boxSize={"90px"}
+                boxSize={"70px"}
                 objectFit="cover"
                 draggable="false"
                 src={image.default.nodejs}
               />
               <Text
                 position={"absolute"}
-                bottom="-10%"
-                left={"-22%"}
+                bottom="7.2%"
                 fontSize="3xs"
                 align={"center"}
               >
