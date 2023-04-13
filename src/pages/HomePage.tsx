@@ -12,10 +12,11 @@ import {
 import { useRef } from "react";
 import { useInViewport } from "react-in-viewport";
 import { Outlet, useNavigate } from "react-router-dom";
-import { Projects } from "./Projects";
-import SaitamaCard from "../component/SaitamaCard";
-import { MyStack } from "../component/MyStack";
-import { RuletHeading } from "../component/RuletHeading";
+import { motion, useAnimation } from "framer-motion";
+
+import { MyStack, SaitamaCard, RuletHeading } from "../component";
+
+import "../styles/ssvg.css";
 
 interface IHomePage {}
 
@@ -33,7 +34,6 @@ export const HomePage: React.FunctionComponent<IHomePage> = () => {
   return (
     <>
       <Box
-        boxShadow="dark-lg"
         rounded={"lg"}
         display="flex"
         flexDirection="column"
@@ -94,13 +94,42 @@ export const HomePage: React.FunctionComponent<IHomePage> = () => {
           />
         </Stack>
 
-        <Text marginTop={20} align={"center"}>
-          Explore my portfolio
-        </Text>
+        <Flex
+          marginTop={["120px","120px", "60px", "60px"]}
+          marginBottom={0}
+          direction={"column"}
+          alignItems={"center"}
+          justifyContent={"center"}
+          margin={"auto"}
+          p={2}
+          w={["80%", "60%", "40%", "30%"]}
+          gap={[9,5,5,5]}
+        >
+          <Text
+            marginTop={['30px',0,0,0]}
+            p={0.7}
+            rounded={"2xl"}
+            w={['90%','90%','85%','80%']}
+            backgroundColor={"#ec5555"}
+            color={"white"}
+            align={"center"}
+          >
+            Explore my portfolio
+          </Text>
+
+          <Box w={['62px','30px','62px']}>
+            <svg style= {{width:'100px'}}
+             onClick={() => console.log("clicked")}>
+              <path className="arrow-path a1" d="M0 0 L30 32 L60 0"></path>
+              <path className="arrow-path a2" d="M0 20 L30 52 L60 20"></path>
+              <path className="arrow-path a3" d="M0 40 L30 72 L60 40"></path>
+            </svg>
+          </Box>
+        </Flex>
       </Box>
 
       <ScaleFade initialScale={0.9} in={enterCount > 0}>
-        <Box rounded={"2xl"} boxShadow={"dark-lg "} margin={5}>
+        <Box rounded={["sm","xl","2xl","2xl"]} boxShadow={["dark-lg","dark-lg","dark-lg"]} marginTop={'20px'} margin={["0","5","5"]}>
           <Heading padding={20} textAlign={"center"}>
             About me
           </Heading>

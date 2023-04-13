@@ -27,8 +27,8 @@ export const MyStack: React.FunctionComponent<IMyStack> = () => {
         display={"flex"}
         justifyContent="center"
         alignItems={"center"}
-        h={{ base: "300px", md: "350px" }}
-        w={{ base: "300px", md: "350px" }}
+        h={{ base: "335px" }}
+        w={{ base: "335px" }}
       >
         <motion.div
           style={{
@@ -103,7 +103,7 @@ export const MyStack: React.FunctionComponent<IMyStack> = () => {
                 borderRadius: "20px",
               }}
               top={["calc(50% - 100px / 2)"]}
-              right={["calc(50% - 90px / 2)"]}
+              right={["calc(50% - 71px / 2)"]}
               boxSize={"70px"}
               objectFit="fill"
               draggable="false"
@@ -116,7 +116,7 @@ export const MyStack: React.FunctionComponent<IMyStack> = () => {
                 borderRadius: "20px",
               }}
               top={["calc(50% - 100px / 2)"]}
-              right={["calc(50% - 90px / 2)"]}
+              right={["calc(50% - 71px / 2)"]}
               boxSize={"70px"}
               objectFit="cover"
               draggable="false"
@@ -129,7 +129,7 @@ export const MyStack: React.FunctionComponent<IMyStack> = () => {
                 borderRadius: "20px",
               }}
               top={["calc(50% - 100px / 2)"]}
-              right={["calc(50% - 90px / 2)"]}
+              right={["calc(50% - 71px / 2)"]}
               boxSize={"70px"}
               objectFit="fill"
               draggable="false"

@@ -5,7 +5,7 @@ interface ISaitamaCard {
   width?: string;
 }
 
-const SaitamaCard: React.FunctionComponent<ISaitamaCard> = ({
+export const SaitamaCard: React.FunctionComponent<ISaitamaCard> = ({
   width = "17vh",
 }) => {
   return (
@@ -13,7 +13,7 @@ const SaitamaCard: React.FunctionComponent<ISaitamaCard> = ({
       display={"grid"}
       marginTop={'55px'}
       gridTemplateColumns={"40% auto"}
-      w={["80%", "80%", "450px","450px"]}
+      w={["90%", "80%", "450px","450px"]}
       h={'300px'}
       bg={"#303240"}
       gap={["1", "2", "3"]}
@@ -127,4 +127,3 @@ const SaitamaCard: React.FunctionComponent<ISaitamaCard> = ({
   );
 };
 
-export default SaitamaCard;

@@ -1,0 +1,52 @@
+.arrow-path {
+  stroke: #f08755;
+  fill: transparent;
+  stroke-width: 1px;
+  -webkit-animation: arrow 2s infinite;
+  animation: arrow 2s infinite;
+}
+
+@keyframes arrow {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes arrow {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.arrow-path.a1 {
+  -webkit-animation-delay: -1s;
+  animation-delay: -1s;
+}
+
+.arrow-path.a2 {
+  -webkit-animation-delay: -0.5s;
+  animation-delay: -0.5s;
+}
+
+.arrow-path.a3 {
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+}
