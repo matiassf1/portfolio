@@ -21,7 +21,6 @@ import "../styles/ssvg.css";
 interface IHomePage {}
 
 export const HomePage: React.FunctionComponent<IHomePage> = () => {
-
   return (
     <>
       <Box
@@ -86,7 +85,7 @@ export const HomePage: React.FunctionComponent<IHomePage> = () => {
         </Stack>
 
         <Flex
-          marginTop={["120px","120px", "60px", "60px"]}
+          marginTop={["120px", "120px", "60px", "60px"]}
           marginBottom={0}
           direction={"column"}
           alignItems={"center"}
@@ -94,13 +93,13 @@ export const HomePage: React.FunctionComponent<IHomePage> = () => {
           margin={"auto"}
           p={2}
           w={["80%", "60%", "40%", "30%"]}
-          gap={[9,5,5,5]}
+          gap={[9, 5, 5, 5]}
         >
           <Text
-            marginTop={['30px',0,0,0]}
+            marginTop={["30px", 0, 0, 0]}
             p={0.7}
             rounded={"2xl"}
-            w={['90%','90%','85%','80%']}
+            w={["90%", "90%", "85%", "80%"]}
             backgroundColor={"#ec5555"}
             color={"white"}
             align={"center"}
@@ -108,20 +107,33 @@ export const HomePage: React.FunctionComponent<IHomePage> = () => {
             Explore my portfolio
           </Text>
 
-          <Box w={['62px','30px','62px']}>
-            <svg style= {{width:'100px'}}
-             onClick={() => console.log("clicked")}>
-              <path className="arrow-path a1" d="M0 0 L30 32 L60 0"></path>
-              <path className="arrow-path a2" d="M0 20 L30 52 L60 20"></path>
-              <path className="arrow-path a3" d="M0 40 L30 72 L60 40"></path>
-            </svg>
+          <Box w={["62px", "30px", "62px"]}>
+            <a href="#aboutHome">
+              <svg style={{ width: "100px", cursor: "pointer" }}>
+                <path className="arrow-path a1" d="M0 0 L30 32 L60 0"></path>
+                <path className="arrow-path a2" d="M0 20 L30 52 L60 20"></path>
+                <path className="arrow-path a3" d="M0 40 L30 72 L60 40"></path>
+              </svg>
+            </a>
           </Box>
         </Flex>
 
-          <AboutMeHome />
+        <Box
+          rounded={["xl", "2xl", "2xl"]}
+          boxShadow={["dark-lg", "dark-lg", "dark-lg"]}
+          margin={'auto'}
+          w={{base:"95%", md:"90%"}}
+          marginTop={"20px"}
+        >
+          <Box id="aboutHome">
+            <AboutMeHome />
+          </Box>
 
+          <Box id="projects">
+            <Heading textAlign={'center'}>Projects</Heading>
+          </Box>
+        </Box>
       </Box>
-
     </>
   );
 };

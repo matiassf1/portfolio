@@ -36,7 +36,8 @@ export const theme = extendTheme({
     "3xl": "5000px",
     full: "9999px",
   },
-});extendTheme({
+});
+extendTheme({
   colors: {
     primary: {
       100: "#011C40",
@@ -73,9 +74,11 @@ export const RouterApp: React.FunctionComponent<IRouterApp> = () => {
         <NavBar />
       </Box>
       <Routes>
-        <Route path="/" element={<HomePage />}>
-          {/* <Route path='projects' element={<Projects />}/> Nested Routes incoming
-                                                          about specific project and info */}
+        <Route path="/" element={<HomePage />} />
+
+        <Route path="/projects" element={<Projects />}>
+          {/*  Nested Routes incoming
+              about specific project and info */}
         </Route>
 
         <Route path="/about" element={<AboutPage />} />

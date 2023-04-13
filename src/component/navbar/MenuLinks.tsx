@@ -1,12 +1,20 @@
 import { Box, Stack } from "@chakra-ui/react";
 import React from "react";
 import { MenuItem } from "./MenuItem";
+import { useLocation } from "react-router-dom";
 
 interface IMenuLinks {
-    isOpen: boolean;
+  isOpen: boolean;
 }
 
-export const MenuLinks: React.FunctionComponent<IMenuLinks> = ({isOpen}) => {
+export const MenuLinks: React.FunctionComponent<IMenuLinks> = ({ isOpen }) => {
+  const location = useLocation();
+  const projects =
+    location?.pathname == "/about"
+      ? "/projects"
+      : location?.pathname == "/projects"
+      ? ""
+      : "#projects";
   return (
     <Box
       display={{ base: isOpen ? "block" : "none", md: "block" }}
@@ -21,7 +29,7 @@ export const MenuLinks: React.FunctionComponent<IMenuLinks> = ({isOpen}) => {
       >
         <MenuItem to="/">Home</MenuItem>
         <MenuItem to="/about">About Me</MenuItem>
-        <MenuItem to="#projects">Projects</MenuItem>
+        <MenuItem to={projects}>Projects</MenuItem>
       </Stack>
     </Box>
   );
