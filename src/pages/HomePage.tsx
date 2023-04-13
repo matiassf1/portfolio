@@ -11,25 +11,16 @@ import {
 } from "@chakra-ui/react";
 import { useRef } from "react";
 import { useInViewport } from "react-in-viewport";
-import { Outlet, useNavigate } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 import { motion, useAnimation } from "framer-motion";
 
-import { MyStack, SaitamaCard, RuletHeading } from "../component";
+import { AboutMeHome, RuletHeading } from "../component";
 
 import "../styles/ssvg.css";
 
 interface IHomePage {}
 
 export const HomePage: React.FunctionComponent<IHomePage> = () => {
-  const ref = useRef(null);
-  const navigate = useNavigate();
-  const { inViewport, enterCount } = useInViewport(
-    ref,
-    { rootMargin: "-200px" },
-    { disconnectOnLeave: false },
-    {}
-  );
-  console.log();
 
   return (
     <>
@@ -126,30 +117,11 @@ export const HomePage: React.FunctionComponent<IHomePage> = () => {
             </svg>
           </Box>
         </Flex>
+
+          <AboutMeHome />
+
       </Box>
 
-      <ScaleFade initialScale={0.9} in={enterCount > 0}>
-        <Box rounded={["sm","xl","2xl","2xl"]} boxShadow={["dark-lg","dark-lg","dark-lg"]} marginTop={'20px'} margin={["0","5","5"]}>
-          <Heading padding={20} textAlign={"center"}>
-            About me
-          </Heading>
-
-          <Box
-            w="full"
-            ref={ref}
-            bgColor="white"
-            scrollSnapAlign={"center"}
-            display="flex"
-            gap={["12", "23", "10", "20"]}
-            alignItems={"center"}
-            justifyContent="space-evenly"
-            flexDirection={["column", "column", "row", "row"]}
-          >
-            <SaitamaCard />
-            <MyStack />
-          </Box>
-        </Box>
-      </ScaleFade>
     </>
   );
 };

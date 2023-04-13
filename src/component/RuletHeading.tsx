@@ -74,7 +74,6 @@ export const RuletHeading = () => {
           fontSize: "2rem",
           fontWeight: "bold",
           textAlign: "center",
-          cursor: "pointer",
         }}
       >
         <Heading fontSize={["17px", "22px", "34px", "40px"]}>

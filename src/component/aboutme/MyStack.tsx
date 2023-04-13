@@ -1,7 +1,7 @@
 import { Box, Img, Heading, Flex, Text } from "@chakra-ui/react";
 import React from "react";
 import { motion } from "framer-motion";
-import * as image from "../ui/images";
+import * as image from "../../ui/images";
 import { useRef } from "react";
 
 interface IMyStack {}

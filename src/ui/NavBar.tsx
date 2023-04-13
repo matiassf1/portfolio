@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import { Logo } from "../component/Logo";
-import { MenuLinks } from "../component/MenuLinks";
-import { MenuToggle } from "../component/MenuToggle";
-import { NavBarContainer } from "../component/NavBarContainer";
+import { Logo } from "../component/navbar/Logo";
+import { MenuLinks } from "../component/navbar/MenuLinks";
+import { MenuToggle } from "../component/navbar/MenuToggle";
+import { NavBarContainer } from "../component/navbar/NavBarContainer";
 
 
 export const NavBar = () => {
