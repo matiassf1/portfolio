@@ -507,11 +507,6 @@ a {
   &:hover {
     color: tint($btn-color, 75%);
 
-    &:before,
-    &:after {
-      // @include size($btn-width);
-    }
-    
     &:before {
       animation: criss-cross-left 0.8s both;
       animation-direction: alternate;
