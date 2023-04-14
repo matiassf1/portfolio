@@ -14,9 +14,9 @@ import { useInViewport } from "react-in-viewport";
 import { Outlet } from "react-router-dom";
 import { motion, useAnimation } from "framer-motion";
 
-import { AboutMeHome, RuletHeading } from "../../component";
+import { AboutMeHome, CarrouselHeader } from "./components";
 
-import "../styles/ssvg.css";
+import "../../styles/ssvg.css";
 
 interface IHomePage {}
 
@@ -52,12 +52,9 @@ export const HomePage: React.FunctionComponent<IHomePage> = () => {
             src="https://imgs.search.brave.com/OxBAGMx5Fg9P5Ij3xFH2BI4DiwSoONbbOiWxZCwJeko/rs:fit:900:600:1/g:ce/aHR0cHM6Ly9pbWFn/ZXMuZmluZWFydGFt/ZXJpY2EuY29tL2lt/YWdlcy1tZWRpdW0t/bGFyZ2UtNS9icmlk/Z2Utb2YtYm9hdHMt/YXQtc2F3YS1ob2t1/c2FpLWthdGFzdXNo/aWthLmpwZw"
             alt="Image.jpg"
           />
-          {/* <Heading fontSize={["17px", "22px", "34px", "40px"]}>
-            Front-End Developer
-          </Heading> */}
 
           <Box w="24%">
-            <RuletHeading />
+            <CarrouselHeader />
           </Box>
         </Flex>
 

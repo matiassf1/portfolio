@@ -1,31 +1,10 @@
-import { Box, Flex, Heading, Img, Text } from "@chakra-ui/react";
+import { Box, Flex, Heading, Img, Text, Button } from '@chakra-ui/react';
 import { useEffect, useState } from "react";
 import { motion, useAnimation } from "framer-motion";
-import aboutImage from "../../ui/images/pexels-ryutaro-tsukata-6249734.jpg";
+import aboutImage from "../images/pexels-ryutaro-tsukata-6249734.jpg";
+import { BigBangButton } from '../../../component/BigBangButton';
 
-const quotes = [
-  // "Life is what happens when you're busy making other plans.",
-  // "Nothing in this world is certain except death and taxes.",
-  // "Believe you can and you're halfway there.",
-  // "Fortune favors the bold.",
-  // "Music is the divine way to tell beautiful, poetic things to the heart.",
-  // "If you want peace, prepare for war.",
-  "Muere pe mierda.",
-  "No me da el rango.",
-  "*Insulto a tu integridad intelectual*",
-];
 
-const authors = [
-  // "John Lennon",
-  // "William the Conqueror",
-  // "Theodore Roosevelt",
-  // "Erasmus",
-  // "St. August.",
-  // "Richard I (the Lionheart)",
-  "Pablo Martin",
-  "se se Sebastian",
-  "El coach",
-];
 
 export const AboutMeHome = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -84,19 +63,11 @@ export const AboutMeHome = () => {
             person. When I'm not coding, you can usually find me outdoors
             enjoying nature or playing football with my friends. I'm a big
             animal lover, too - I think they're fascinating creatures.
-            <motion.div animate={control}>
-              <Text
-                margin={{ md: "40px" }}
-                marginTop={"0px"}
-                marginBottom={"50px"}
-                w={{ base: "90%", md: "500px" }}
-              >
-                {quotes[currentIndex]}
-                <span color="gray">- {authors[currentIndex]}</span>
-              </Text>
-            </motion.div>
           </Text>
         </Flex>
+
+        <BigBangButton content={'Learn More About Me.'} />
+
       </Box>
   );
 };
