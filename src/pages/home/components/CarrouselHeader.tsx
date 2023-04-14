@@ -6,7 +6,7 @@ const phrasesOne: string[] = ["Welcome!", "", "I'm Matias", ""];
 
 const phrasesTwo: string[] = ["", "To my Portfolio", "", "Chato manco"];
 
-export const RuletHeading = () => {
+export const CarrouselHeader = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const controlsOne = useAnimation();
   const controlsTwo = useAnimation();

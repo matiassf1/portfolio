@@ -14,7 +14,7 @@ import { useInViewport } from "react-in-viewport";
 import { Outlet } from "react-router-dom";
 import { motion, useAnimation } from "framer-motion";
 
-import { AboutMeHome, RuletHeading } from "../component";
+import { AboutMeHome, RuletHeading } from "../../component";
 
 import "../styles/ssvg.css";
 

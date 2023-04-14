@@ -1,7 +1,7 @@
 import { Box, ScaleFade, Heading } from '@chakra-ui/react';
 import { useRef } from "react";
 import { useInViewport } from "react-in-viewport";
-import { SaitamaCard, MyStack } from "../component";
+import { SaitamaCard, MyStack } from "./components";
 
 export const AboutPage = () => {
   const ref = useRef(null);

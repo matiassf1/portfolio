@@ -1,8 +1,8 @@
 import { ChakraProvider, Heading } from "@chakra-ui/react";
 import { Route, Routes } from "react-router-dom";
 import { extendTheme, Box } from "@chakra-ui/react";
-import { AboutPage } from "../pages/AboutPage";
-import { HomePage } from "../pages/HomePage";
+import { AboutPage } from "../pages/about/AboutPage";
+import { HomePage } from "../pages/home/HomePage";
 import { Projects } from "../pages/Projects";
 import { NavBar } from "../ui/NavBar";
 

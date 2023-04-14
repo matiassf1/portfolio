@@ -50,7 +50,6 @@ export const AboutMeHome = () => {
   }, [currentIndex]);
 
   return (
-    <Box>
       <Box w={"100%"} m={"auto"}>
         <Heading
           paddingTop={14}
@@ -99,7 +98,8 @@ export const AboutMeHome = () => {
           </Text>
         </Flex>
       </Box>
-
+  );
+};
       {/* <Text>Speaking
             of coding, I've been diving deep into the tech world lately. I've
             been honing my skills in React.js, Javascript, Css, Html,
@@ -111,6 +111,3 @@ export const AboutMeHome = () => {
             others and contributing to projects in any way I can. I'm a
             dedicated learner and problem-solver, and I know that these traits
             will serve me well in whatever I tackle next.</Text> */}
-    </Box>
-  );
-};
