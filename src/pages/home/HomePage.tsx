@@ -22,7 +22,6 @@ interface IHomePage {}
 
 export const HomePage: React.FunctionComponent<IHomePage> = () => {
   return (
-    <>
       <Box
         rounded={"lg"}
         display="flex"
@@ -88,13 +87,11 @@ export const HomePage: React.FunctionComponent<IHomePage> = () => {
           alignItems={"center"}
           justifyContent={"center"}
           margin={"auto"}
-          p={2}
           w={["80%", "60%", "40%", "30%"]}
           gap={[9, 5, 5, 5]}
         >
           <Text
             marginTop={["30px", 0, 0, 0]}
-            p={0.7}
             rounded={"2xl"}
             w={["90%", "90%", "85%", "80%"]}
             backgroundColor={"#ec5555"}
@@ -118,19 +115,19 @@ export const HomePage: React.FunctionComponent<IHomePage> = () => {
         <Box
           rounded={["xl", "2xl", "2xl"]}
           boxShadow={["dark-lg", "dark-lg", "dark-lg"]}
-          margin={'auto'}
-          w={{base:"95%", md:"90%"}}
+          margin={"auto"}
+          w={{ base: "95%", md: "90%" }}
           marginTop={"20px"}
+          id="aboutHome"
         >
-          <Box id="aboutHome">
+          <Box>
             <AboutMeHome />
           </Box>
 
           <Box id="projects">
-            <Heading textAlign={'center'}>Projects</Heading>
+            <Heading textAlign={"center"}>Projects</Heading>
           </Box>
         </Box>
       </Box>
-    </>
   );
 };

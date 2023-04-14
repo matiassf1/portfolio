@@ -1,14 +1,13 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400|Raleway:300);
 @import './external';
 
-$btn-width: 250px !default;
-$btn-height: 80px !default;
+$btn-width: 200px !default;
+$btn-height: 50px !default;
 $btn-full: $btn-height+$btn-width !default;
 $btn-half: $btn-full/2 !default;
 $bg-color: #eeeeee !default;
 
 html {
-  padding-top: 50px;
   font-family: 'Open Sans', Helvetica, arial, sans-serif;
   text-align: center;
   background-color: $bg-color;
@@ -32,12 +31,6 @@ html {
   z-index: -1;
 }
 
-h1,
-h4 {
-  font-family: 'Raleway', 'Open Sans', sans-serif;
-  margin: 0;
-  line-height: 1;
-}
 
 a {
   text-decoration: none;
@@ -485,6 +478,7 @@ a {
 
 .btn-11 {
   position: relative;
+  border-radius: 80% 0 80% 0;
   $btn-color: #5D91A6;
   $btn-color-dark: shade($btn-color, 40%);
   color: tint($btn-color);
