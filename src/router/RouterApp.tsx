@@ -71,19 +71,15 @@ export const RouterApp: React.FunctionComponent<IRouterApp> = () => {
   return (
     <ChakraProvider theme={theme}>
       <Box fontFamily={"monospace"}>
-        <NavBar />
+        <NavBar>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/*" element={<HomePage />} />
+          </Routes>
+        </NavBar>
       </Box>
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-
-        <Route path="/projects" element={<Projects />}>
-          {/*  Nested Routes incoming
-              about specific project and info */}
-        </Route>
-
-        <Route path="/about" element={<AboutPage />} />
-        <Route path="/*" element={<HomePage />} />
-      </Routes>
     </ChakraProvider>
   );
 };

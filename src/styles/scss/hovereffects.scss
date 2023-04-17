@@ -8,10 +8,6 @@ $btn-half: $btn-full/2 !default;
 $bg-color: #eeeeee !default;
 
 html {
-  font-family: 'Open Sans', Helvetica, arial, sans-serif;
-  text-align: center;
-  background-color: $bg-color;
-
   .btn,
   .btn:before,
   .btn:after {

@@ -8,10 +8,10 @@ export const AboutMeHome = () => {
   return (
     <Box w={"100%"} m={"auto"}>
       <Heading
-        paddingTop={14}
         fontSize={"3xl"}
         textAlign={"center"}
-        marginBottom={"30px"}
+        marginBottom={"15px"}
+        marginTop={"35px"}
       >
         About me
       </Heading>
@@ -48,7 +48,7 @@ export const AboutMeHome = () => {
         </Text>
       </Flex>
 
-      <BigBangButton url="/about" content={"More About Me"} />
+      <BigBangButton url="/about" content={"About Me"} />
     </Box>
   );
 };

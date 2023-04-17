@@ -1,11 +1,13 @@
-import React, { useState } from "react";
-import { Logo } from "../component/navbar/Logo";
-import { MenuLinks } from "../component/navbar/MenuLinks";
-import { MenuToggle } from "../component/navbar/MenuToggle";
-import { NavBarContainer } from "../component/navbar/NavBarContainer";
+import React, { useState, MouseEvent } from 'react';
+import { NavBarContainer, Logo, MenuToggle, MenuLinks } from '../component/navbar';
+import { Outlet } from 'react-router-dom';
+
+interface INavBar {
+  children: React.ReactNode;
+}
 
 
-export const NavBar = () => {
+export const NavBar: React.FC<INavBar> = ({ children }) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   const toggle: React.MouseEventHandler<HTMLDivElement> = (): void =>
@@ -21,6 +23,8 @@ export const NavBar = () => {
         <MenuToggle toggle={toggle} isOpen={isOpen} />
         <MenuLinks isOpen={isOpen} />
       </NavBarContainer>
+      {children}
     </>
   );
 };
+

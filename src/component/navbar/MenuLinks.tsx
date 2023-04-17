@@ -15,6 +15,14 @@ export const MenuLinks: React.FunctionComponent<IMenuLinks> = ({ isOpen }) => {
       : location?.pathname == "/projects"
       ? ""
       : "#projects";
+  const home =
+    location?.pathname == "/"
+      ? "#home"
+      : location?.pathname == "/about-home"
+      ? "#home"
+      : location?.pathname == "/#home" 
+      ? "#home"
+      : "/"
   return (
     <Box
       display={{ base: isOpen ? "block" : "none", md: "block" }}
@@ -27,7 +35,7 @@ export const MenuLinks: React.FunctionComponent<IMenuLinks> = ({ isOpen }) => {
         direction={["column", "row", "row", "row"]}
         pt={[3, 3, 0, 0]}
       >
-        <MenuItem to="/">Home</MenuItem>
+        <MenuItem to={home}>Home</MenuItem>
         <MenuItem to="/about">About Me</MenuItem>
         <MenuItem to={projects}>Projects</MenuItem>
       </Stack>

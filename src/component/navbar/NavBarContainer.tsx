@@ -1,6 +1,4 @@
 import { Flex } from "@chakra-ui/react";
-import { ReactJSXElement, ReactJSXElementAttributesProperty } from "@emotion/react/types/jsx-namespace"
-
 
 interface INavBarContainer {
     children: any;
