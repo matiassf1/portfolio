@@ -52,7 +52,7 @@ export const AboutPage = () => {
             </Heading>
           </CardHeader>
           <CardBody>
-            <Flex gap={5}>
+            <Flex gap={5} alignItems="center">
               <Text>
                 Throughout my life, I have crossed paths with different people
                 and shared unique and special moments with each of them, thanks
@@ -66,7 +66,7 @@ export const AboutPage = () => {
                 physical and psychological well-being. I wish for the world to
                 grow spiritually so that we can advance as a society.
               </Text>
-              <Icon boxSize={5} as={FcLibrary} />
+              <Icon boxSize={7} as={FcLibrary} />
             </Flex>
           </CardBody>
         </Card>
@@ -83,7 +83,7 @@ export const AboutPage = () => {
             </Heading>
           </CardHeader>
           <CardBody>
-            <Flex gap={5}>
+            <Flex gap={5} alignItems="center">
               <Text>
                 I believe that just like life itself, the future will be full of
                 problems, and new needs will arise that must be met by different
@@ -96,7 +96,7 @@ export const AboutPage = () => {
                 contribute to possible solutions that may emerge in the near
                 future.
               </Text>
-              <Icon boxSize={5} as={FcCommandLine} />
+              <Icon boxSize={7} as={FcCommandLine} />
             </Flex>
           </CardBody>
         </Card>
@@ -113,7 +113,7 @@ export const AboutPage = () => {
             </Heading>
           </CardHeader>
           <CardBody>
-            <Flex gap={5}>
+            <Flex gap={5} alignItems="center">
               <Text>
                 I am a very active and extremely curious person, and these two
                 qualities have shaped me throughout my life. I have acquired
@@ -125,7 +125,7 @@ export const AboutPage = () => {
                 engaging in physical activity, and I also enjoy playing online
                 with friends and having a good time. For the Horde!
               </Text>
-              <Icon boxSize={5} as={FcUnlock} />
+              <Icon boxSize={7} as={FcUnlock} />
             </Flex>
           </CardBody>
         </Card>

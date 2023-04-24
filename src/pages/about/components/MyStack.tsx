@@ -27,8 +27,8 @@ export const MyStack: React.FunctionComponent<IMyStack> = () => {
         display={"flex"}
         justifyContent="center"
         alignItems={"center"}
-        h={{ base: "270px" }}
-        w={{ base: "250px" }}
+        h={{ base: "270px", md: "335px" }}
+        w={{ base: "250px", md: "335px" }}
       >
         <motion.div
           style={{
@@ -58,7 +58,7 @@ export const MyStack: React.FunctionComponent<IMyStack> = () => {
               }}
               top={["calc(50% - 100px / 2)"]}
               left={["calc(50% - 70px / 2)"]}
-              boxSize={"50px"}
+              boxSize={["50px", "70px"]}
               objectFit="fill"
               draggable="false"
               src={image.default.css}
@@ -71,7 +71,7 @@ export const MyStack: React.FunctionComponent<IMyStack> = () => {
               }}
               top={["calc(50% - 100px / 2)"]}
               left={["calc(50% - 70px / 2)"]}
-              boxSize={"50px"}
+              boxSize={["50px", "70px"]}
               objectFit="cover"
               draggable="false"
               src={image.default.tailwind}
@@ -84,7 +84,7 @@ export const MyStack: React.FunctionComponent<IMyStack> = () => {
               }}
               top={["calc(50% - 100px / 2)"]}
               left={["calc(50% - 70px / 2)"]}
-              boxSize={"50px"}
+              boxSize={["50px", "70px"]}
               objectFit="fill"
               draggable="false"
               src={image.default.bootstrap}
@@ -103,8 +103,8 @@ export const MyStack: React.FunctionComponent<IMyStack> = () => {
                 borderRadius: "20px",
               }}
               top={["calc(50% - 100px / 2)"]}
-              right={["calc(50% - 45px / 2)"]}
-              boxSize={"50px"}
+              right={["calc(50% - 45px / 2)", "calc(50% - 70px / 2)"]}
+              boxSize={["50px", "70px"]}
               objectFit="fill"
               draggable="false"
               src={image.default.javascript}
@@ -116,8 +116,8 @@ export const MyStack: React.FunctionComponent<IMyStack> = () => {
                 borderRadius: "20px",
               }}
               top={["calc(50% - 100px / 2)"]}
-              right={["calc(50% - 45px / 2)"]}
-              boxSize={"50px"}
+              right={["calc(50% - 45px / 2)", "calc(50% - 70px / 2)"]}
+              boxSize={["50px", "70px"]}
               objectFit="cover"
               draggable="false"
               src={image.default.react}
@@ -129,8 +129,8 @@ export const MyStack: React.FunctionComponent<IMyStack> = () => {
                 borderRadius: "20px",
               }}
               top={["calc(50% - 100px / 2)"]}
-              right={["calc(50% - 45px / 2)"]}
-              boxSize={"50px"}
+              right={["calc(50% - 45px / 2)", "calc(50% - 70px / 2)"]}
+              boxSize={["50px", "70px"]}
               objectFit="fill"
               draggable="false"
               src={image.default.typescript}
@@ -156,7 +156,7 @@ export const MyStack: React.FunctionComponent<IMyStack> = () => {
               }}
               top={["calc(50% - 100px / 2)"]}
               right={["calc(50% - 70px / 2)"]}
-              boxSize={"50px"}
+              boxSize={["50px", "70px"]}
               objectFit="fill"
               draggable="false"
               src={image.default.html}
@@ -169,7 +169,7 @@ export const MyStack: React.FunctionComponent<IMyStack> = () => {
               }}
               top={["calc(50% - 100px / 2)"]}
               right={["calc(50% - 70px / 2)"]}
-              boxSize={"50px"}
+              boxSize={["50px", "70px"]}
               objectFit="fill"
               draggable="false"
               src={image.default.apirest}
@@ -184,7 +184,7 @@ export const MyStack: React.FunctionComponent<IMyStack> = () => {
                 }}
                 top={["calc(50% - 100px / 2)"]}
                 right={["calc(50% - 70px / 2)"]}
-                boxSize={"50px"}
+                boxSize={["50px", "70px"]}
                 objectFit="cover"
                 draggable="false"
                 src={image.default.nodejs}
