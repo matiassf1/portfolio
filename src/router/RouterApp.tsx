@@ -4,7 +4,7 @@ import { extendTheme, Box } from "@chakra-ui/react";
 import { AboutPage } from "../pages/about/AboutPage";
 import { HomePage } from "../pages/home/HomePage";
 import { Projects } from "../pages/projects/Projects";
-import { NavBar } from "../layout/NavBar";
+import { Layout } from "../layout/Layout";
 
 interface IRouterApp {}
 
@@ -48,7 +48,7 @@ extendTheme({
     tertiary: {
       100: "#A60321",
     },
-    alert: "#e63946",
+    alert: "#e63946"
   },
   fonts: {
     heading: "Bungee Shade",
@@ -71,14 +71,14 @@ export const RouterApp: React.FunctionComponent<IRouterApp> = () => {
   return (
     <ChakraProvider theme={theme}>
       <Box fontFamily={"monospace"}>
-        <NavBar>
+        <Layout>
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/*" element={<HomePage />} />
           </Routes>
-        </NavBar>
+        </Layout>
       </Box>
     </ChakraProvider>
   );

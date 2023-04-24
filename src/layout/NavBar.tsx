@@ -3,11 +3,10 @@ import { NavBarContainer, Logo, MenuToggle, MenuLinks } from '../component/navba
 import { Outlet } from 'react-router-dom';
 
 interface INavBar {
-  children: React.ReactNode;
 }
 
 
-export const NavBar: React.FC<INavBar> = ({ children }) => {
+export const NavBar: React.FC<INavBar> = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   const toggle: React.MouseEventHandler<HTMLDivElement> = (): void =>
@@ -23,7 +22,6 @@ export const NavBar: React.FC<INavBar> = ({ children }) => {
         <MenuToggle toggle={toggle} isOpen={isOpen} />
         <MenuLinks isOpen={isOpen} />
       </NavBarContainer>
-      {children}
     </>
   );
 };
