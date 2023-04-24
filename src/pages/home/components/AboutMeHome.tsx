@@ -8,6 +8,7 @@ export const AboutMeHome = () => {
   return (
     <Box w={"100%"} m={"auto"} id="about-home">
       <Heading
+        p={12}
         fontSize={"3xl"}
         textAlign={"center"}
         marginBottom={"15px"}

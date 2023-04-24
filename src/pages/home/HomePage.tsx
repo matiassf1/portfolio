@@ -24,7 +24,6 @@ export const HomePage: React.FunctionComponent<IHomePage> = () => {
       flexDirection="column"
       style={{ userSelect: "none" }}
       scrollSnapAlign={"center"}
-      h="100vh"
       w="full"
     >
       <Flex
