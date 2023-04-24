@@ -19,6 +19,7 @@ export const NavBarContainer: React.FunctionComponent<INavBarContainer> = ({ chi
         p={7}
         pb={3}
         bg={'white'}
+        zIndex={3}
         color={["blackAlpha.700", "blackAlpha.700", "#F26D6D", "#F26D6D"]}
         {...props}
       >

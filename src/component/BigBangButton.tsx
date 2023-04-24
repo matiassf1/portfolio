@@ -1,6 +1,6 @@
-import { Button } from "@chakra-ui/react";
+import { Box, Button } from "@chakra-ui/react";
 import { motion } from "framer-motion";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 
 interface IBigBangButton {
   content: string;
@@ -9,16 +9,22 @@ interface IBigBangButton {
 
 export const BigBangButton: React.FunctionComponent<IBigBangButton> = ({
   content,
-  url
+  url,
 }) => {
-
-  const navigate =  useNavigate();
+  const navigate = useNavigate();
 
   const onRedirect = () => {
     navigate(url);
-  }
+  };
 
-  return <button style={{right:"20%"}} className="btn-11 btn" onClick={onRedirect}>{content}</button>
-
-  ;
+  return (
+    <Box right={'20%'}>
+      <button
+        className="btn-11 btn"
+        onClick={onRedirect}
+      >
+        {content}
+      </button>
+    </Box>
+  );
 };

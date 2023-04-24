@@ -5,7 +5,7 @@ $btn-width: 200px !default;
 $btn-height: 50px !default;
 $btn-full: $btn-height+$btn-width !default;
 $btn-half: $btn-full/2 !default;
-$bg-color: #eeeeee !default;
+$bg-color: #eeeeeed2 !default;
 
 html {
   .btn,
@@ -15,11 +15,11 @@ html {
     transition: 0.5s ease-in-out;
   }
 
-  i,em,
-  b,strong,
-  span {
-    transition: none;
-  }
+  // i,em,
+  // b,strong,
+  // span {
+  //   transition: none;
+  // }
 }
 
 *:before,
@@ -28,11 +28,11 @@ html {
 }
 
 
-a {
-  text-decoration: none;
-  line-height: $btn-height;
-  color: black;
-}
+// a {
+//   text-decoration: none;
+//   line-height: $btn-height;
+//   color: black;
+// }
 
 .centerer {
   width: 100%;
@@ -56,7 +56,8 @@ a {
   max-width: $btn-width;
   margin: 1rem auto;
   text-transform: uppercase;
-  border: 1px solid currentColor;
+  font-weight: bold;
+  border: 1.4px solid currentColor;
 }
 
 .btn-0 {

@@ -1,12 +1,12 @@
 import { Box, Flex, Heading, Img, Text, Button } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 import { motion, useAnimation } from "framer-motion";
-import aboutImage from "../images/pexels-ryutaro-tsukata-6249734.jpg";
+import abouthome from "../../../assets/images/pexels-ryutaro-tsukata-6249734.jpg"
 import { BigBangButton } from "../../../component/BigBangButton";
 
 export const AboutMeHome = () => {
   return (
-    <Box w={"100%"} m={"auto"}>
+    <Box w={"100%"} m={"auto"} id="about-home">
       <Heading
         fontSize={"3xl"}
         textAlign={"center"}
@@ -29,7 +29,7 @@ export const AboutMeHome = () => {
           p={[0, 0, 5, 5]}
         >
           <Img
-            src={aboutImage}
+            src={abouthome}
             w={{ md: "260px", base: "200px" }}
             h={{ md: "340px", base: "300px" }}
             float={"left"}
@@ -42,13 +42,13 @@ export const AboutMeHome = () => {
           Argentina. I love learning new things, so I'm always digging into
           different topics that grab my attention. My logical thinking skills
           are pretty sharp, and I'm known for being a friendly and empathetic
-          person. When I'm not coding, you can usually find me outdoors enjoying
-          nature or playing football with my friends. I'm a big animal lover,
-          too - I think they're fascinating creatures.
+          person. I like to enjoy my time with friends in the
+          nature or playing football. I'm a big animal lover 
+          too. I think they're fascinating creatures.
         </Text>
       </Flex>
 
-      <BigBangButton url="/about" content={"About Me"} />
+      <BigBangButton url="/about" content={"More About Me"} />
     </Box>
   );
 };

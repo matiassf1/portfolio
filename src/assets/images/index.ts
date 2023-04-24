@@ -7,7 +7,7 @@ import apirest from './apirest.png'
 import bootstrap from './bootstrap.jfif'
 import tailwind from './tailwindcss.png'
 import typescript from './typescript.png'
-
+import abouthome from './pexels-ryutaro-tsukata-6249734.jpg'
 export default {
     react,
     javascript,

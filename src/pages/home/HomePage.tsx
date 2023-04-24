@@ -42,7 +42,6 @@ export const HomePage: React.FunctionComponent<IHomePage> = () => {
           borderBottomRightRadius={`60%`}
           borderBottomLeftRadius={"none"}
           boxSize={["100px", "150px", "230px"]}
-          objectFit="cover"
           src="https://imgs.search.brave.com/OxBAGMx5Fg9P5Ij3xFH2BI4DiwSoONbbOiWxZCwJeko/rs:fit:900:600:1/g:ce/aHR0cHM6Ly9pbWFn/ZXMuZmluZWFydGFt/ZXJpY2EuY29tL2lt/YWdlcy1tZWRpdW0t/bGFyZ2UtNS9icmlk/Z2Utb2YtYm9hdHMt/YXQtc2F3YS1ob2t1/c2FpLWthdGFzdXNo/aWthLmpwZw"
           alt="Image.jpg"
         />

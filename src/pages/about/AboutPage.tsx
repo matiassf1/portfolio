@@ -1,4 +1,13 @@
-import { Box, ScaleFade, Heading, Text } from "@chakra-ui/react";
+import {
+  Box,
+  ScaleFade,
+  Heading,
+  Text,
+  Card,
+  CardHeader,
+  CardBody,
+  Stack,
+} from "@chakra-ui/react";
 import { useEffect, useRef, useState } from "react";
 import { useInViewport } from "react-in-viewport";
 import { SaitamaCard, MyStack } from "./components";
@@ -9,8 +18,8 @@ import { quotes, authors } from "../../const/quotes";
 export const AboutPage = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const ref = useRef(null);
-  
-  const { inViewport, enterCount } = useInViewport(
+
+  const { enterCount } = useInViewport(
     ref,
     { rootMargin: "-200px" },
     { disconnectOnLeave: false },
@@ -37,17 +46,44 @@ export const AboutPage = () => {
   }, [currentIndex]);
   return (
     <>
-      <Heading marginTop={"30px"}>About Me</Heading>
-      <motion.div animate={control}>
+      <Heading marginTop={["100px","120px"]} marginLeft='30px' textAlign='start'>About Me</Heading>
+
+      {/* Cartas a lo largo con caracteristicas mias - card: content / icon */}
+
+        <Card rounded="2xl" shadow="2xl" m="10px">
+          <CardHeader>
+            <Heading size="md">My Values</Heading>
+          </CardHeader>
+          <CardBody>
+            <Text>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum
+              expedita maiores assumenda id voluptatibus distinctio fugit
+              doloremque facilis iste? Aliquid velit voluptas mollitia dolore,
+              ipsa magni doloribus nesciunt obcaecati illo!
+            </Text>
+          </CardBody>
+        </Card>
+
+      <Card>
+        <CardHeader>
+          <Heading size="md"></Heading>
+        </CardHeader>
+        <CardBody>
+          <Text></Text>
+        </CardBody>
+      </Card>
+
+      {/* <motion.div animate={control}>
         <Text
-          color={"black"}
+          color="black"
           margin={{ md: "40px" }}
           w={{ base: "90%", md: "500px" }}
+          fontWeight="bold"
         >
           {quotes[currentIndex]}
-          <span color="gray">- {authors[currentIndex]}</span>
+          <span style={{ color: "gray" }}>- {authors[currentIndex]}</span>
         </Text>
-      </motion.div>
+      </motion.div> */}
       <ScaleFade initialScale={0.9} in={enterCount > 0}>
         <Box
           w="full"
@@ -55,7 +91,7 @@ export const AboutPage = () => {
           display="flex"
           ref={ref}
           gap={["12", "23", "10", "20"]}
-          alignItems={"center"}
+          alignItems="center"
           justifyContent="space-evenly"
           flexDirection={["column", "column", "row", "row"]}
         >

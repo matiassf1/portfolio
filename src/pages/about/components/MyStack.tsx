@@ -1,7 +1,7 @@
 import { Box, Img, Heading, Flex, Text } from "@chakra-ui/react";
 import React from "react";
 import { motion } from "framer-motion";
-import * as image from "../images";
+import * as image from "../../../assets/images";
 import { useRef } from "react";
 
 interface IMyStack {}
@@ -27,8 +27,8 @@ export const MyStack: React.FunctionComponent<IMyStack> = () => {
         display={"flex"}
         justifyContent="center"
         alignItems={"center"}
-        h={{ base: "335px" }}
-        w={{ base: "335px" }}
+        h={{ base: "270px" }}
+        w={{ base: "250px" }}
       >
         <motion.div
           style={{
@@ -58,7 +58,7 @@ export const MyStack: React.FunctionComponent<IMyStack> = () => {
               }}
               top={["calc(50% - 100px / 2)"]}
               left={["calc(50% - 70px / 2)"]}
-              boxSize={"70px"}
+              boxSize={"50px"}
               objectFit="fill"
               draggable="false"
               src={image.default.css}
@@ -71,7 +71,7 @@ export const MyStack: React.FunctionComponent<IMyStack> = () => {
               }}
               top={["calc(50% - 100px / 2)"]}
               left={["calc(50% - 70px / 2)"]}
-              boxSize={"70px"}
+              boxSize={"50px"}
               objectFit="cover"
               draggable="false"
               src={image.default.tailwind}
@@ -84,7 +84,7 @@ export const MyStack: React.FunctionComponent<IMyStack> = () => {
               }}
               top={["calc(50% - 100px / 2)"]}
               left={["calc(50% - 70px / 2)"]}
-              boxSize={"70px"}
+              boxSize={"50px"}
               objectFit="fill"
               draggable="false"
               src={image.default.bootstrap}
@@ -103,8 +103,8 @@ export const MyStack: React.FunctionComponent<IMyStack> = () => {
                 borderRadius: "20px",
               }}
               top={["calc(50% - 100px / 2)"]}
-              right={["calc(50% - 71px / 2)"]}
-              boxSize={"70px"}
+              right={["calc(50% - 45px / 2)"]}
+              boxSize={"50px"}
               objectFit="fill"
               draggable="false"
               src={image.default.javascript}
@@ -116,8 +116,8 @@ export const MyStack: React.FunctionComponent<IMyStack> = () => {
                 borderRadius: "20px",
               }}
               top={["calc(50% - 100px / 2)"]}
-              right={["calc(50% - 71px / 2)"]}
-              boxSize={"70px"}
+              right={["calc(50% - 45px / 2)"]}
+              boxSize={"50px"}
               objectFit="cover"
               draggable="false"
               src={image.default.react}
@@ -129,8 +129,8 @@ export const MyStack: React.FunctionComponent<IMyStack> = () => {
                 borderRadius: "20px",
               }}
               top={["calc(50% - 100px / 2)"]}
-              right={["calc(50% - 71px / 2)"]}
-              boxSize={"70px"}
+              right={["calc(50% - 45px / 2)"]}
+              boxSize={"50px"}
               objectFit="fill"
               draggable="false"
               src={image.default.typescript}
@@ -156,7 +156,7 @@ export const MyStack: React.FunctionComponent<IMyStack> = () => {
               }}
               top={["calc(50% - 100px / 2)"]}
               right={["calc(50% - 70px / 2)"]}
-              boxSize={"70px"}
+              boxSize={"50px"}
               objectFit="fill"
               draggable="false"
               src={image.default.html}
@@ -169,7 +169,7 @@ export const MyStack: React.FunctionComponent<IMyStack> = () => {
               }}
               top={["calc(50% - 100px / 2)"]}
               right={["calc(50% - 70px / 2)"]}
-              boxSize={"70px"}
+              boxSize={"50px"}
               objectFit="fill"
               draggable="false"
               src={image.default.apirest}
@@ -184,14 +184,15 @@ export const MyStack: React.FunctionComponent<IMyStack> = () => {
                 }}
                 top={["calc(50% - 100px / 2)"]}
                 right={["calc(50% - 70px / 2)"]}
-                boxSize={"70px"}
+                boxSize={"50px"}
                 objectFit="cover"
                 draggable="false"
                 src={image.default.nodejs}
               />
               <Text
                 position={"absolute"}
-                bottom="7.2%"
+                bottom="4%"
+                right="-35%"
                 fontSize="3xs"
                 align={"center"}
               >
