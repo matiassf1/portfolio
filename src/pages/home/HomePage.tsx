@@ -3,14 +3,10 @@ import {
   Flex,
   Heading,
   Image,
-  Code,
-  Stack,
-  ScaleFade,
-  theme,
   Text,
 } from "@chakra-ui/react";
 
-import { AboutMeHome, CarrouselHeader } from "./components";
+import { AboutMeHome, CarrouselHeader, ConsoleLogs, Arrows } from "./components";
 
 import "../../styles/ssvg.css";
 
@@ -50,28 +46,7 @@ export const HomePage: React.FunctionComponent<IHomePage> = () => {
         </Box>
       </Flex>
 
-      <Stack
-        direction={["column", "row"]}
-        justify="center"
-        padding="20px"
-        mt={["15px", "20px", "35px"]}
-      >
-        <Code
-          colorScheme="tertiary"
-          textColor={"white"}
-          children="console.log(welcome!!)"
-        />
-        <Code
-          colorScheme="secondary"
-          textColor={"white"}
-          children="const myFullName = 'Sfer Matias Gabriel'"
-        />
-        <Code
-          colorScheme="primary"
-          textColor={"white"}
-          children="yarn add good-vibes@latest"
-        />
-      </Stack>
+      <ConsoleLogs />
 
       <Flex
         marginTop={["120px", "120px", "60px", "60px"]}
@@ -94,15 +69,7 @@ export const HomePage: React.FunctionComponent<IHomePage> = () => {
           Explore my portfolio
         </Text>
 
-        <Box w={["62px", "30px", "62px"]}>
-          <a href="#about-home">
-            <svg style={{ width: "100px", cursor: "pointer" }}>
-              <path className="arrow-path a1" d="M0 0 L30 32 L60 0"></path>
-              <path className="arrow-path a2" d="M0 20 L30 52 L60 20"></path>
-              <path className="arrow-path a3" d="M0 40 L30 72 L60 40"></path>
-            </svg>
-          </a>
-        </Box>
+        <Arrows />
       </Flex>
 
       <Box
