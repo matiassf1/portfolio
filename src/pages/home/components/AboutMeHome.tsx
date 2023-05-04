@@ -6,7 +6,6 @@ export const AboutMeHome = () => {
   return (
     <Box w={"100%"} m={"auto"}>
       <Heading
-        p={12}
         fontSize={"3xl"}
         textAlign={"center"}
         marginBottom={"15px"}
@@ -14,15 +13,15 @@ export const AboutMeHome = () => {
       >
         About me
       </Heading>
-      <Flex margin={"auto"} w={{ md: "70%", base: "90%" }}>
+      <Flex margin={"auto"} w={{ md: "70%", base: "90%" }} justifyContent='center'>
         <Text
           maxWidth={"100%"}
           fontSize={"sm"}
           margin={[
-            "0px",
-            "30px 0px 30px 30px",
-            "30px 0px 30px 30px",
-            "30px 0px 30px 30px",
+            "20px",
+            "30px 0px 0px 30px",
+            "30px 0px 0px 30px",
+            "30px 0px 0px 30px",
           ]}
           textAlign={"start"}
           p={[0, 0, 5, 5]}
@@ -44,23 +43,12 @@ export const AboutMeHome = () => {
           person. I like to enjoy my time with friends in the
           nature or playing football. I'm a big animal lover 
           too. I think they're fascinating creatures.
+          
         </Text>
       </Flex>
 
       <BigBangButton url="/about" content={"More About Me"} />
+
     </Box>
   );
-};
-{
-  /* <Text>Speaking
-            of coding, I've been diving deep into the tech world lately. I've
-            been honing my skills in React.js, Javascript, Css, Html,
-            Tailwindcss, TypeScript, Redux, MySQL, firebase, axios, node.js, and
-            express.js. I'm already pretty good at handling API services and
-            their data, and I'm currently learning how to build them myself. I'm
-            excited about the possibilities that the tech industry holds, and
-            I'm ready to make a big impact. I'm always open to working with
-            others and contributing to projects in any way I can. I'm a
-            dedicated learner and problem-solver, and I know that these traits
-            will serve me well in whatever I tackle next.</Text> */
 }

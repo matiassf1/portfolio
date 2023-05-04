@@ -77,9 +77,7 @@ const HomePage: React.FunctionComponent<IHomePage> = () => {
         w={{ base: "95%", md: "90%" }}
         marginTop={"20px"}
       >
-        <Box>
-          <AboutMeHome />
-        </Box>
+        <AboutMeHome />
 
         <Box id="projects">
           <Heading textAlign={"center"}>Projects</Heading>

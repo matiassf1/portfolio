@@ -2,6 +2,7 @@ import {
   Box,
   ScaleFade,
   Heading,
+  Text
 } from "@chakra-ui/react";
 import { useRef, useState } from "react";
 import { useInViewport } from "react-in-viewport";
@@ -46,6 +47,17 @@ import { Cards } from "./components/Cards";
           <SaitamaCard />
           <MyStack />
         </Box>
+        <Text>Speaking
+            of coding, I've been diving deep into the tech world lately. I've
+            been honing my skills in React.js, Javascript, Css, Html,
+            Tailwindcss, TypeScript, Redux, MySQL, firebase, axios, node.js, and
+            express.js. I'm already pretty good at handling API services and
+            their data, and I'm currently learning how to build them myself. I'm
+            excited about the possibilities that the tech industry holds, and
+            I'm ready to make a big impact. I'm always open to working with
+            others and contributing to projects in any way I can. I'm a
+            dedicated learner and problem-solver, and I know that these traits
+            will serve me well in whatever I tackle next.</Text>
       </ScaleFade>
     </>
   );
