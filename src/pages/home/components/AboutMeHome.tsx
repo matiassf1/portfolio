@@ -1,6 +1,4 @@
 import { Box, Flex, Heading, Img, Text, Button } from "@chakra-ui/react";
-import { useEffect, useState } from "react";
-import { motion, useAnimation } from "framer-motion";
 import abouthome from "../../../assets/images/pexels-ryutaro-tsukata-6249734.jpg"
 import { BigBangButton } from "../../../component/BigBangButton";
 
