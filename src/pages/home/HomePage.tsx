@@ -1,18 +1,26 @@
-import {
-  Box,
-  Flex,
-  Heading,
-  Image,
-  Text,
-} from "@chakra-ui/react";
+import { Box, Flex, Heading, Image, Text } from "@chakra-ui/react";
 
-import { AboutMeHome, CarrouselHeader, ConsoleLogs, Arrows } from "./components";
+import {
+  AboutMeHome,
+  CarrouselHeader,
+  ConsoleLogs,
+  Arrows,
+} from "./components";
 
 import "../../styles/ssvg.css";
 
 interface IHomePage {}
 
-export const HomePage: React.FunctionComponent<IHomePage> = () => {
+const HomePage: React.FunctionComponent<IHomePage> = () => {
+
+  const scroll = () => {
+    
+    window?.scrollTo({
+      top:650,
+      behavior:'smooth'
+    })
+
+  };
   return (
     <Box
       rounded={"lg"}
@@ -68,8 +76,9 @@ export const HomePage: React.FunctionComponent<IHomePage> = () => {
         >
           Explore my portfolio
         </Text>
-
-        <Arrows />
+        <Box onClick={scroll}>
+          <Arrows />
+        </Box>
       </Flex>
 
       <Box
@@ -90,3 +99,5 @@ export const HomePage: React.FunctionComponent<IHomePage> = () => {
     </Box>
   );
 };
+
+export default HomePage;

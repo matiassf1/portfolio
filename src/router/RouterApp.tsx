@@ -1,14 +1,11 @@
-import { ChakraProvider, Heading } from "@chakra-ui/react";
-import { Route, Routes } from "react-router-dom";
-import { extendTheme, Box } from "@chakra-ui/react";
-import { AboutPage } from "../pages/about/AboutPage";
-import { HomePage } from "../pages/home/HomePage";
-import { Projects } from "../pages/projects/Projects";
+import React, { lazy, Suspense } from 'react';
+import { ChakraProvider, Box } from "@chakra-ui/react";
+import { Route, Routes, useLocation } from "react-router-dom";
+import { AnimatePresence, motion } from "framer-motion";
+import { extendTheme } from "@chakra-ui/react";
 import { Layout } from "../layout/Layout";
 
-interface IRouterApp {}
-
-export const theme = extendTheme({
+const theme = extendTheme({
   colors: {
     primary: {
       100: "#011C40",
@@ -37,47 +34,41 @@ export const theme = extendTheme({
     full: "9999px",
   },
 });
-extendTheme({
-  colors: {
-    primary: {
-      100: "#011C40",
-    },
-    secondary: {
-      100: "#0477BF",
-    },
-    tertiary: {
-      100: "#A60321",
-    },
-    alert: "#e63946"
-  },
-  fonts: {
-    heading: "Bungee Shade",
-    body: "Martian Mono",
-  },
-  radii: {
-    none: "0",
-    sm: "0.125rem",
-    base: "0.25rem",
-    md: "0.375rem",
-    lg: "0.5rem",
-    xl: "0.75rem",
-    "2xl": "1rem",
-    "3xl": "0px",
-    full: "9999px",
-  },
-});
 
-export const RouterApp: React.FunctionComponent<IRouterApp> = () => {
+const pageVariants = {
+  initial: { opacity: 0, x: "-100vw" },
+  enter: { opacity: 1, x: 0, transition: { duration: 0.5 } },
+  exit: { opacity: 0, x: "100vw", transition: { duration: 0.5 } },
+};
+
+const Home = lazy(() => import('../pages/home/HomePage'));
+const About = lazy(() => import('../pages/about/AboutPage'));
+const Projects = lazy(() => import('../pages/projects/Projects'));
+
+export const RouterApp = () => {
+  const location = useLocation();
   return (
     <ChakraProvider theme={theme}>
       <Box fontFamily={"monospace"}>
         <Layout>
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/projects" element={<Projects />} />
-            <Route path="/about" element={<AboutPage />} />
-            <Route path="/*" element={<HomePage />} />
-          </Routes>
+          <AnimatePresence exitBeforeEnter>
+            <Suspense fallback={<div>Loading...</div>}>
+              <motion.div
+                key={location.pathname}
+                variants={pageVariants}
+                initial="initial"
+                animate="enter"
+                exit="exit"
+              >
+                <Routes location={location}>
+                  <Route path="/" element={<Home />} />
+                  <Route path="/projects" element={<Projects />} />
+                  <Route path="/about" element={<About />} />
+                  <Route path="/*" element={<Home />} />
+                </Routes>
+              </motion.div>
+            </Suspense>
+          </AnimatePresence>
         </Layout>
       </Box>
     </ChakraProvider>

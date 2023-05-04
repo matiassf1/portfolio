@@ -6,7 +6,7 @@ import { BigBangButton } from "../../../component/BigBangButton";
 
 export const AboutMeHome = () => {
   return (
-    <Box w={"100%"} m={"auto"} id="about-home">
+    <Box w={"100%"} m={"auto"}>
       <Heading
         p={12}
         fontSize={"3xl"}

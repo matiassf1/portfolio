@@ -1,11 +1,23 @@
 import { FaInstagram, FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
 import { Flex, IconButton, theme } from "@chakra-ui/react";
+import { useState, useEffect } from 'react';
 
-import React from "react";
 
 export const Footer = () => {
+  const [footerHide, setshowingFooter] = useState(true)
+  const showFooter = () => {
+   
+  }
+
+  useEffect(() => {
+    setTimeout(() => {
+      setshowingFooter(false);
+    }, 1500)
+  
+  }, [])
+  
   return (
-    <Flex justifyContent="center" alignItems="center" py={4} mt="30px" mb="40px">
+    <Flex justifyContent="center" alignItems="center" py={4} mt="30px" mb="40px" hidden={footerHide}>
       <IconButton
         aria-label="Instagram"
         icon={<FaInstagram />}

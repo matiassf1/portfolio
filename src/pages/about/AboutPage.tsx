@@ -8,7 +8,7 @@ import { useInViewport } from "react-in-viewport";
 import { SaitamaCard, MyStack } from "./components";
 import { Cards } from "./components/Cards";
 
-export const AboutPage = () => {
+ const AboutPage = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const ref = useRef(null);
 
@@ -50,3 +50,5 @@ export const AboutPage = () => {
     </>
   );
 };
+
+export default AboutPage;
