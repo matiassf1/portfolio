@@ -8,18 +8,16 @@ import {
 } from "./components";
 
 import "../../styles/ssvg.css";
+import BlinkingText from "../../component/BlinkingText";
 
 interface IHomePage {}
 
 const HomePage: React.FunctionComponent<IHomePage> = () => {
-
   const scroll = () => {
-    
     window?.scrollTo({
-      top:650,
-      behavior:'smooth'
-    })
-
+      top: 650,
+      behavior: "smooth",
+    });
   };
   return (
     <Box
@@ -66,16 +64,7 @@ const HomePage: React.FunctionComponent<IHomePage> = () => {
         w={["80%", "60%", "40%", "30%"]}
         gap={[9, 5, 5, 5]}
       >
-        <Text
-          marginTop={["30px", 0, 0, 0]}
-          rounded={"2xl"}
-          w={["90%", "90%", "85%", "80%"]}
-          backgroundColor={"#ec5555"}
-          color={"white"}
-          align={"center"}
-        >
-          Explore my portfolio
-        </Text>
+        <BlinkingText value="Explore my portfolio" />
         <Box onClick={scroll}>
           <Arrows />
         </Box>

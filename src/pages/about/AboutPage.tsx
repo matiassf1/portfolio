@@ -23,7 +23,7 @@ import { Cards } from "./components/Cards";
     <>
       <Heading
         marginTop={["100px", "120px"]}
-        marginLeft="30px"
+        marginLeft="70px"
         marginBottom="60px"
         textAlign="start"
       >
