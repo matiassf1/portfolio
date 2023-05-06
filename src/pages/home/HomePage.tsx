@@ -9,6 +9,7 @@ import {
 
 import "../../styles/ssvg.css";
 import BlinkingText from "../../component/BlinkingText";
+import { Carrousel } from "../../component/Carrousel";
 
 interface IHomePage {}
 
@@ -81,6 +82,13 @@ const HomePage: React.FunctionComponent<IHomePage> = () => {
 
         <Box id="projects">
           <Heading textAlign={"center"}>Projects</Heading>
+{/* 
+          REVISAR
+          <Carrousel>
+            <Image src="../../assets/images/logo.jpg" />
+            <Image src="../../assets/images/logo.jpg" />
+            <Image src="../../assets/images/logo.jpg" />
+          </Carrousel> */}
         </Box>
       </Box>
     </Box>
