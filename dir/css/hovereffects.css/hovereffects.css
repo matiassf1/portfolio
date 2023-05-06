@@ -33,7 +33,7 @@ html .btn:after {
   border: 1.4px solid currentColor; }
 
 .btn-0 {
-  color: #7e3685; }
+  color: #3a91a7; }
   .btn-0:before {
     content: '';
     position: absolute;
@@ -41,15 +41,15 @@ html .btn:after {
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: #3e0b43;
+    background-color: #0e4c5b;
     transform: translateX(-100%); }
   .btn-0:hover {
-    color: #d9c4db; }
+    color: #c5dfe5; }
     .btn-0:hover:before {
       transform: translateX(0); }
 
 .btn-1 {
-  color: #a1a458; }
+  color: #6373bb; }
   .btn-1:before {
     content: '';
     position: absolute;
@@ -58,15 +58,15 @@ html .btn:after {
     bottom: 0;
     left: 0;
     border-right: 50px solid transparent;
-    border-bottom: 50px solid #565923;
+    border-bottom: 50px solid #2b3669;
     transform: translateX(-100%); }
   .btn-1:hover {
-    color: #e3e4ce; }
+    color: #d1d6eb; }
     .btn-1:hover:before {
       transform: translateX(0); }
 
 .btn-1-2 {
-  color: #be48a6; }
+  color: #6872b4; }
   .btn-1-2:before, .btn-1-2:after {
     content: '';
     position: absolute;
@@ -74,7 +74,7 @@ html .btn:after {
     right: 0;
     bottom: 0;
     left: 0;
-    border-bottom: 50px solid #6b185a; }
+    border-bottom: 50px solid #2e3564; }
   .btn-1-2:before {
     right: -50px;
     border-right: 50px solid transparent;
@@ -84,14 +84,14 @@ html .btn:after {
     border-left: 50px solid transparent;
     transform: translateX(100%); }
   .btn-1-2:hover {
-    color: #ecc9e5; }
+    color: #d3d6e9; }
     .btn-1-2:hover:before {
       transform: translateX(-40%); }
     .btn-1-2:hover:after {
       transform: translateX(40%); }
 
 .btn-2 {
-  color: #cc5e70; }
+  color: #ca3973; }
   .btn-2:before, .btn-2:after {
     content: '';
     position: absolute;
@@ -102,15 +102,15 @@ html .btn:after {
   .btn-2:before {
     right: -50px;
     border-right: 50px solid transparent;
-    border-bottom: 50px solid #752734;
+    border-bottom: 50px solid #740d36;
     transform: translateX(-100%); }
   .btn-2:after {
     left: -50px;
     border-left: 50px solid transparent;
-    border-top: 50px solid #752734;
+    border-top: 50px solid #740d36;
     transform: translateX(100%); }
   .btn-2:hover {
-    color: #f0d0d5; }
+    color: #f0c5d6; }
     .btn-2:hover:before {
       transform: translateX(-49%); }
     .btn-2:hover:after {
@@ -123,8 +123,8 @@ html .btn:after {
   right: 0;
   bottom: 0;
   left: 0;
-  border-top: 25px solid #531751;
-  border-bottom: 25px solid #531751; }
+  border-top: 25px solid #6e760c;
+  border-bottom: 25px solid #6e760c; }
 
 .btn-3:before {
   border-right: 25px solid transparent;
@@ -135,14 +135,14 @@ html .btn:after {
   transform: translateX(100%); }
 
 .btn-3:hover {
-  color: #e2c9e1; }
+  color: #edf1c4; }
   .btn-3:hover:before {
     transform: translateX(-30%); }
   .btn-3:hover:after {
     transform: translateX(30%); }
 
 .btn-4 {
-  color: #a34c86; }
+  color: #66aa4d; }
   .btn-4:before, .btn-4:after,
   .btn-4 span:before,
   .btn-4 span:after {
@@ -152,7 +152,7 @@ html .btn:after {
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: #581a44; }
+    background-color: #2d5d1b; }
   .btn-4:before {
     transform: translate(-100%, -100%); }
   .btn-4:after {
@@ -162,7 +162,7 @@ html .btn:after {
   .btn-4 span:after {
     transform: translate(100%, 100%); }
   .btn-4:hover {
-    color: #e4cadc; }
+    color: #d2e6cb; }
     .btn-4:hover:before {
       transform: translate(-50%, -50%); }
     .btn-4:hover:after {
@@ -173,7 +173,7 @@ html .btn:after {
       transform: translate(50%, 50%); }
 
 .btn-5 {
-  color: #37aa54; }
+  color: #d054bc; }
   .btn-5:after {
     content: '';
     width: 0;
@@ -181,7 +181,7 @@ html .btn:after {
     -webkit-transform: rotate(360deg);
     border-style: solid;
     border-width: 0 0 0 0;
-    border-color: transparent #0c5d20 transparent transparent;
+    border-color: transparent #78206a transparent transparent;
     position: absolute;
     top: 0;
     right: 0; }
@@ -192,7 +192,7 @@ html .btn:after {
     -webkit-transform: rotate(360deg);
     border-style: solid;
     border-width: 0 0 0 0;
-    border-color: transparent transparent transparent #0c5d20;
+    border-color: transparent transparent transparent #78206a;
     position: absolute;
     bottom: 0;
     left: 0; }
@@ -206,38 +206,38 @@ html .btn:after {
   .btn-5:before {
     bottom: 0;
     left: 0;
-    border-color: transparent transparent transparent #0c5d20; }
+    border-color: transparent transparent transparent #78206a; }
   .btn-5:after {
     top: 0;
     right: 0;
-    border-color: transparent #0c5d20 transparent transparent; }
+    border-color: transparent #78206a transparent transparent; }
   .btn-5:hover {
-    color: #c4e6cd; }
+    color: #f1cdeb; }
     .btn-5:hover:before, .btn-5:hover:after {
       border-width: 50px 210px; }
 
 .btn-6 {
-  color: #404926; }
+  color: #b58548; }
   .btn-6 span {
     position: absolute;
     display: block;
     width: 0;
     height: 0;
     border-radius: 50%;
-    background-color: #121900;
+    background-color: #654318;
     transition: width 0.4s ease-in-out, height 0.4s ease-in-out;
     transform: translate(-50%, -50%);
     z-index: -1; }
   .btn-6:hover {
-    color: #c7cabf; }
+    color: #e9dbc9; }
     .btn-6:hover span {
       width: 225%;
       height: 450px; }
   .btn-6:active {
-    background-color: #1e2900; }
+    background-color: #a87028; }
 
 .btn-7 {
-  color: #afa44f; }
+  color: #5f76a5; }
   .btn-7:before, .btn-7:after,
   .btn-7 span:before,
   .btn-7 span:after {
@@ -246,7 +246,7 @@ html .btn:after {
     top: 0;
     width: 25.25%;
     height: 0;
-    background-color: #61591d; }
+    background-color: #283859; }
   .btn-7:before {
     left: 0; }
   .btn-7:after {
@@ -259,14 +259,14 @@ html .btn:after {
   .btn-7 span:after {
     left: 75%; }
   .btn-7:hover {
-    color: #e8e4cb; }
+    color: #d0d7e5; }
     .btn-7:hover:before, .btn-7:hover:after,
     .btn-7:hover span:before,
     .btn-7:hover span:after {
       height: 50px; }
 
 .btn-8 {
-  color: #c3be9c; }
+  color: #483bc5; }
   .btn-8:before, .btn-8:after {
     content: '';
     position: absolute;
@@ -274,20 +274,20 @@ html .btn:after {
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: #6e6b53; }
+    background-color: #180e70; }
   .btn-8:before {
     transform: translateY(-100%); }
   .btn-8:after {
     transform: translateY(100%); }
   .btn-8:hover {
-    color: #edece2; }
+    color: #c9c5ee; }
     .btn-8:hover:before {
       transform: translateY(-50%); }
     .btn-8:hover:after {
       transform: translateY(50%); }
 
 .btn-9 {
-  color: #2daf38; }
+  color: #968781; }
   .btn-9:before, .btn-9:after,
   .btn-9 span:before,
   .btn-9 span:after {
@@ -297,7 +297,7 @@ html .btn:after {
     left: 0;
     width: 100%;
     height: 0;
-    background-color: rgba(5, 97, 13, 0.25);
+    background-color: rgba(79, 68, 64, 0.25);
     transition: 0.4s ease-in-out; }
   .btn-9:after,
   .btn-9 span:before {
@@ -307,16 +307,16 @@ html .btn:after {
   .btn-9 span:after {
     transition-delay: 0.4s; }
   .btn-9:hover {
-    color: #c1e8c5; }
+    color: #e0dcda; }
     .btn-9:hover:before, .btn-9:hover:after,
     .btn-9:hover span:before,
     .btn-9:hover span:after {
       height: 50px; }
   .btn-9:active {
-    background-color: #08a115; }
+    background-color: #83726b; }
 
 .btn-10 {
-  color: #919e91; }
+  color: #c692cb; }
   .btn-10:before, .btn-10:after,
   .btn-10 span:before,
   .btn-10 span:after {
@@ -326,7 +326,7 @@ html .btn:after {
     left: 0;
     width: 0;
     height: 50px;
-    background-color: rgba(76, 85, 75, 0.25);
+    background-color: rgba(113, 76, 116, 0.25);
     transition: 0.4s; }
   .btn-10:after,
   .btn-10 span:before {
@@ -336,13 +336,13 @@ html .btn:after {
   .btn-10 span:after {
     transition-delay: 0.4s; }
   .btn-10:hover {
-    color: #dfe3df; }
+    color: #eedff0; }
     .btn-10:hover:before, .btn-10:hover:after,
     .btn-10:hover span:before,
     .btn-10:hover span:after {
       width: 200px; }
   .btn-10:active {
-    background-color: #7e8d7d; }
+    background-color: #bc7fc2; }
 
 @keyframes criss-cross-left {
   0% {
@@ -387,7 +387,8 @@ html .btn:after {
     right: -20px;
     transform: translate(50%, -50%); }
   .btn-11:hover {
-    color: #d7e4e9; }
+    color: #d7e4e9; 
+    border-width: 0;}
     .btn-11:hover:before {
       animation: criss-cross-left 0.8s both;
       animation-direction: alternate; }

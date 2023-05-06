@@ -1,11 +1,15 @@
 import React, { lazy, Suspense } from 'react';
-import { ChakraProvider, Box } from "@chakra-ui/react";
+import { ChakraProvider, Box, ColorModeScript } from "@chakra-ui/react";
 import { Route, Routes, useLocation } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import { extendTheme } from "@chakra-ui/react";
 import { Layout } from "../layout/Layout";
 
 const theme = extendTheme({
+  config:{
+    initialColorMode: "ligth",
+    useSystemColorMode: true
+  },
   colors: {
     primary: {
       100: "#011C40",
@@ -49,6 +53,7 @@ export const RouterApp = () => {
   const location = useLocation();
   return (
     <ChakraProvider theme={theme}>
+      <ColorModeScript initialColorMode={theme.config.initialColorMode} />
       <Box fontFamily={"monospace"}>
         <Layout>
           <AnimatePresence exitBeforeEnter>

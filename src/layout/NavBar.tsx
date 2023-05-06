@@ -1,6 +1,6 @@
 import React, { useState, MouseEvent } from 'react';
-import { NavBarContainer, Logo, MenuToggle, MenuLinks } from '../component/navbar';
-import { Outlet } from 'react-router-dom';
+import { NavBarContainer, Logo, MenuToggle, MenuLinks, ToggleColorMode} from '../component/navbar';
+import { Box } from '@chakra-ui/react';
 
 interface INavBar {
 }
@@ -21,6 +21,7 @@ export const NavBar: React.FC<INavBar> = () => {
         />
         <MenuToggle toggle={toggle} isOpen={isOpen} />
         <MenuLinks isOpen={isOpen} />
+        <ToggleColorMode />
       </NavBarContainer>
     </>
   );
