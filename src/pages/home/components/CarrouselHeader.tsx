@@ -2,9 +2,9 @@ import { Flex, Heading } from "@chakra-ui/react";
 import { motion, useAnimation } from "framer-motion";
 import { useState, useEffect } from "react";
 
-const phrasesOne: string[] = ["Welcome!", "", "I'm Matias", ""];
+const phrasesOne: string[] = ["Welcome to", "", "Creative", "", "Chato manco"];
 
-const phrasesTwo: string[] = ["", "To my Portfolio", "", "Chato manco"];
+const phrasesTwo: string[] = ["", "My Portfolio", "", "Experience"];
 
 export const CarrouselHeader = () => {
   const [currentIndex, setCurrentIndex] = useState(0);

@@ -378,7 +378,6 @@ html .btn:after {
     content: '';
     width: 20px;
     height: 20px;
-    background-color: #5D91A6;
     border-radius: 50%; }
   .btn-11:before {
     left: -20px;

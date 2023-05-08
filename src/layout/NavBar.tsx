@@ -21,7 +21,7 @@ export const NavBar: React.FC<INavBar> = () => {
         />
         <MenuToggle toggle={toggle} isOpen={isOpen} />
         <MenuLinks isOpen={isOpen} />
-        <ToggleColorMode />
+        <ToggleColorMode isOpen={isOpen} />
       </NavBarContainer>
     </>
   );
