@@ -371,13 +371,14 @@ html .btn:after {
 .btn-11 {
   position: relative;
   border-radius: 80% 0 80% 0;
-  color: #75a2b3; }
+  color: #253659; }
   .btn-11:before, .btn-11:after {
     position: absolute;
     top: 50%;
     content: '';
     width: 20px;
     height: 20px;
+    background-color: #253659;
     border-radius: 50%; }
   .btn-11:before {
     left: -20px;
@@ -386,7 +387,7 @@ html .btn:after {
     right: -20px;
     transform: translate(50%, -50%); }
   .btn-11:hover {
-    color: #d7e4e9; 
+    color: #9ebac5; 
     border-width: 0;}
     .btn-11:hover:before {
       animation: criss-cross-left 0.8s both;

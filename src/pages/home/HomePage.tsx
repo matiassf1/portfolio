@@ -37,6 +37,7 @@ const HomePage: React.FunctionComponent<IHomePage> = () => {
         marginTop="25vh"
         direction={"row"}
         id="home"
+        
       >
         <Image
           borderTopLeftRadius={"60%"}

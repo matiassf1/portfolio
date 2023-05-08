@@ -37,6 +37,7 @@ export const Footer = () => {
           icon={<FaLinkedin />}
           variant="ghost"
           colorScheme="blue"
+          rounded="lg"
           size="lg"
           mr={4}
         />
@@ -47,16 +48,18 @@ export const Footer = () => {
           icon={<FaGithub />}
           variant="ghost"
           color="#465973"
+          rounded="lg"
           size="lg"
           mr={4}
         />
-      </Link>{" "}
+      </Link>
       <Link target="__blank" href="">
         <IconButton
-          aria-label="Mail"
+          aria-label="Mail" 
           icon={<FaEnvelope />}
           variant="ghost"
           color="#BF4F45"
+          rounded="lg"
           size="lg"
         />
       </Link>

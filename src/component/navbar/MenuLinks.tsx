@@ -9,20 +9,7 @@ interface IMenuLinks {
 
 export const MenuLinks: React.FunctionComponent<IMenuLinks> = ({ isOpen }) => {
   const location = useLocation();
-  const projects =
-    location?.pathname == "/about"
-      ? "/projects"
-      : location?.pathname == "/projects"
-      ? ""
-      : "#projects";
-  const home =
-    location?.pathname == "/"
-      ? "#home"
-      : location?.pathname == "/about-home"
-      ? "#home"
-      : location?.pathname == "/#home" 
-      ? "#home"
-      : "/"
+
   return (
     <Box
       display={{ base: isOpen ? "block" : "none", md: "block" }}
@@ -35,9 +22,9 @@ export const MenuLinks: React.FunctionComponent<IMenuLinks> = ({ isOpen }) => {
         direction={["column", "row", "row", "row"]}
         pt={[3, 3, 0, 0]}
       >
-        <MenuItem to={home}>Home</MenuItem>
+        <MenuItem to="/home">Home</MenuItem>
         <MenuItem to="/about">About Me</MenuItem>
-        <MenuItem to={projects}>Projects</MenuItem>
+        <MenuItem to="#projects">Projects</MenuItem>
       </Stack>
     </Box>
   );
