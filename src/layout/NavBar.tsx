@@ -18,7 +18,6 @@ export const NavBar: React.FC<INavBar> = () => {
         <Logo
           w="100px"
           color={colorMode === 'dark' ? '#DEEFE7' : '#F26D6D'}
-
         />
         <MenuToggle toggle={toggle} isOpen={isOpen} />
         <MenuLinks isOpen={isOpen} />

@@ -1,11 +1,12 @@
 import { motion } from "framer-motion";
-import { Text } from "@chakra-ui/react";
+import { Text, useColorMode } from "@chakra-ui/react";
 
 interface IBlinkingText {
     value: string;
 }
 
 const BlinkingText: React.FunctionComponent<IBlinkingText> = ({ value }) => {
+  const { colorMode } = useColorMode()
   return (
     <motion.div
       animate={{ opacity: [1, 0.4, 1], transition: { duration: 2, repeat: Infinity } }}
@@ -17,7 +18,7 @@ const BlinkingText: React.FunctionComponent<IBlinkingText> = ({ value }) => {
         p={2}
         px={6}
         w="100%"
-        backgroundColor={"#ec5555"}
+        backgroundColor={colorMode == 'dark'? "#2073F7" : "#ec5555"}
         color={"white"}
         align={"center"}
       >

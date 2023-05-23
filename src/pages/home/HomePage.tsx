@@ -1,4 +1,4 @@
-import { Box, Flex, Heading, Image, Text } from "@chakra-ui/react";
+import { Box, Flex, Heading, Image, Text, useColorMode } from "@chakra-ui/react";
 
 import {
   AboutMeHome,
@@ -20,6 +20,7 @@ const HomePage: React.FunctionComponent<IHomePage> = () => {
       behavior: "smooth",
     });
   };
+
   return (
     <Box
       rounded={"lg"}
@@ -82,7 +83,7 @@ const HomePage: React.FunctionComponent<IHomePage> = () => {
         <AboutMeHome />
 
         <Box id="projects">
-          <Heading textAlign={"center"}>Projects</Heading>
+          <Heading fontFamily='monospace' textAlign={"center"}>Projects</Heading>
 {/* 
           REVISAR
           <Carrousel>
