@@ -1,10 +1,11 @@
-import { Box, ScaleFade, Heading } from "@chakra-ui/react";
+import { Box, ScaleFade, Heading, useColorMode } from "@chakra-ui/react";
 import { useRef, useState } from "react";
 import { useInViewport } from "react-in-viewport";
 import { SaitamaCard, MyStack, AccordionHome, Cards } from "./components";
 
 const AboutPage = () => {
   const ref = useRef(null);
+  const { colorMode }= useColorMode()
 
   const { enterCount } = useInViewport(
     ref,
@@ -29,7 +30,7 @@ const AboutPage = () => {
       <ScaleFade initialScale={0.9} in={enterCount > 0}>
         <Box
           w="full"
-          bgColor="white"
+          bgColor={colorMode === 'dark' ? '#1A202C' : 'white'}
           display="flex"
           ref={ref}
           gap={["12", "23", "10", "20"]}

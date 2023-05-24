@@ -1,4 +1,4 @@
-import { Box, Flex, Heading, Image, Text, useColorMode } from "@chakra-ui/react";
+import { Box, Flex, Heading, Image } from "@chakra-ui/react";
 
 import {
   AboutMeHome,
@@ -9,7 +9,6 @@ import {
 
 import "../../styles/ssvg.css";
 import BlinkingText from "../../component/BlinkingText";
-import { Carrousel } from "../../component/Carrousel";
 
 interface IHomePage {}
 
