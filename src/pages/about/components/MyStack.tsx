@@ -1,33 +1,85 @@
-import { Box, Img, Heading, Flex, Text } from "@chakra-ui/react";
-import React from "react";
-import { motion } from "framer-motion";
+import { Box, Flex, Img, Text } from "@chakra-ui/react";
+import React, { useEffect, useRef } from "react";
+import { motion, useAnimation } from "framer-motion";
 import * as image from "../../../assets/images";
-import { useRef } from "react";
 
 interface IMyStack {}
 
 export const MyStack: React.FunctionComponent<IMyStack> = () => {
-  const containerReactRef = useRef(null);
+  const containerReactRef = useRef<HTMLDivElement>(null);
+  const blockData = [
+    {
+      src: image.default.css,
+    },
+    {
+      src: image.default.tailwind,
+    },
+    {
+      src: image.default.bootstrap,
+    },
+    {
+      src: image.default.javascript,
+    },
+    {
+      src: image.default.react,
+    },
+    {
+      src: image.default.typescript,
+    },
+    {
+      src: image.default.html,
+    },
+    {
+      src: image.default.apirest,
+    },
+    {
+      src: image.default.nodejs,
+      text: 'Learning Node.js & Express'
+    },
+  ];
+
+  const controls = useAnimation();
+
+  useEffect(() => {
+    const containerElement = containerReactRef.current!;
+    const containerBounds = containerElement.getBoundingClientRect();
+
+    const staggerDuration = 0.2; // Duration between each block animation
+    const staggerDelay = 0.1; // Delay before starting the block animations
+
+    controls.start((i) => ({
+      opacity: 1,
+      y: 0,
+      transition: {
+        delay: staggerDelay + i * staggerDuration,
+        type: "spring",
+        damping: 10,
+        stiffness: 100,
+      },
+    }));
+  }, []);
 
   return (
     <Flex
-      color={"white"}
+      color="white"
       direction="column"
-      alignItems="center"
-      justify={"center"}
-      placeContent={"center"}
+      alignItems="flex-end"
+      justify="center"
+      placeContent="center"
       placeItems="center"
+      margin={'10px'}
+      marginTop={0}
       w={["80%", "80%", "auto", "auto"]}
     >
-
       <Box background="#303240" mt="60px" p={4} rounded="xl">
         <Box
-          position={"relative"}
-          display={"flex"}
+          position="relative"
+          display="flex"
+          flexDirection="column"
           justifyContent="center"
-          alignItems={"center"}
-          h={{ base: "270px", md: "335px" }}
-          w={{ base: "250px", md: "335px" }}
+          alignItems="center"
+          h="100%"
+          w={{ base: "80px", md: "100px" }}
         >
           <motion.div
             style={{
@@ -36,172 +88,49 @@ export const MyStack: React.FunctionComponent<IMyStack> = () => {
               height: "100%",
               width: "100%",
               borderRadius: "20px",
-              top: "calc(50% - 100px)",
-              left: "calc(50% - 100px)",
             }}
             ref={containerReactRef}
           />
-          <motion.div
-            style={{
-              position: "absolute",
-              top: "auto",
-              left: "0",
-              right: "1",
-              margin: "30px",
-            }}
-            children={[
+          {blockData.map((block, index) => (
+            <motion.div
+              key={index}
+              style={{
+                position: "relative",
+                opacity: 0,
+                marginBottom:'10px'
+              }}
+              initial={false}
+              animate={controls}
+              custom={index}
+              whileHover={{ scale: 1.1 }}
+            >
               <Img
                 style={{
                   position: "relative",
                   borderRadius: "20px",
                 }}
-                top={["calc(50% - 100px / 2)"]}
-                left={["calc(50% - 70px / 2)"]}
-                boxSize={["50px", "70px"]}
-                objectFit="fill"
-                draggable="false"
-                src={image.default.css}
-              />,
-              <Img
-                style={{
-                  position: "relative",
-                  marginTop: "20px",
-                  borderRadius: "20px",
-                }}
-                top={["calc(50% - 100px / 2)"]}
-                left={["calc(50% - 70px / 2)"]}
-                boxSize={["50px", "70px"]}
+                boxSize={["50px", "75px"]}
                 objectFit="cover"
                 draggable="false"
-                src={image.default.tailwind}
-              />,
-              <Img
-                style={{
-                  position: "relative",
-                  marginTop: "20px",
-                  borderRadius: "20px",
-                }}
-                top={["calc(50% - 100px / 2)"]}
-                left={["calc(50% - 70px / 2)"]}
-                boxSize={["50px", "70px"]}
-                objectFit="fill"
-                draggable="false"
-                src={image.default.bootstrap}
-              />,
-            ]}
-            drag
-            dragConstraints={containerReactRef}
-          />
-
-          <motion.div
-            style={{ position: "absolute", top: "auto", margin: "30px" }}
-            children={[
-              <Img
-                style={{
-                  position: "relative",
-                  borderRadius: "20px",
-                }}
-                top={["calc(50% - 100px / 2)"]}
-                right={["calc(50% - 45px / 2)", "calc(50% - 70px / 2)"]}
-                boxSize={["50px", "70px"]}
-                objectFit="fill"
-                draggable="false"
-                src={image.default.javascript}
-              />,
-              <Img
-                style={{
-                  position: "relative",
-                  marginTop: "20px",
-                  borderRadius: "20px",
-                }}
-                top={["calc(50% - 100px / 2)"]}
-                right={["calc(50% - 45px / 2)", "calc(50% - 70px / 2)"]}
-                boxSize={["50px", "70px"]}
-                objectFit="cover"
-                draggable="false"
-                src={image.default.react}
-              />,
-              <Img
-                style={{
-                  position: "relative",
-                  marginTop: "20px",
-                  borderRadius: "20px",
-                }}
-                top={["calc(50% - 100px / 2)"]}
-                right={["calc(50% - 45px / 2)", "calc(50% - 70px / 2)"]}
-                boxSize={["50px", "70px"]}
-                objectFit="fill"
-                draggable="false"
-                src={image.default.typescript}
-              />,
-            ]}
-            drag
-            dragConstraints={containerReactRef}
-          />
-
-          <motion.div
-            style={{
-              position: "absolute",
-              top: "auto",
-              left: "1",
-              right: "0",
-              margin: "30px",
-            }}
-            children={[
-              <Img
-                style={{
-                  position: "relative",
-                  borderRadius: "20px",
-                }}
-                top={["calc(50% - 100px / 2)"]}
-                right={["calc(50% - 70px / 2)"]}
-                boxSize={["50px", "70px"]}
-                objectFit="fill"
-                draggable="false"
-                src={image.default.html}
-              />,
-              <Img
-                style={{
-                  position: "relative",
-                  marginTop: "20px",
-                  borderRadius: "20px",
-                }}
-                top={["calc(50% - 100px / 2)"]}
-                right={["calc(50% - 70px / 2)"]}
-                boxSize={["50px", "70px"]}
-                objectFit="fill"
-                draggable="false"
-                src={image.default.apirest}
-              />,
-              <div>
-                <Img
-                  style={{
-                    position: "relative",
-                    marginTop: "20px",
-                    borderRadius: "20px",
-                    opacity: "0.1",
-                  }}
-                  top={["calc(50% - 100px / 2)"]}
-                  right={["calc(50% - 70px / 2)"]}
-                  boxSize={["50px", "70px"]}
-                  objectFit="cover"
-                  draggable="false"
-                  src={image.default.nodejs}
-                />
+                src={block.src}
+              />
+              {block.text && (
                 <Text
                   position="absolute"
-                  bottom="6%"
-                  fontSize="2xs"
-                  fontStyle="bold"
+                  bottom="13%"
+                  fontSize="xs"
+                  fontWeight='bold'
+                  background={'black'}
+                  rounded="3xl"
+                  opacity='0.7'
                   align="center"
+                  color='white'
                 >
-                  Node.js && Express.js in process..
+                  {block.text}
                 </Text>
-              </div>,
-            ]}
-            drag
-            dragConstraints={containerReactRef}
-          />
+              )}
+            </motion.div>
+          ))}
         </Box>
       </Box>
     </Flex>

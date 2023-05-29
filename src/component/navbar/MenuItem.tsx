@@ -1,18 +1,20 @@
-import { Link, Text, Button, useColorMode } from "@chakra-ui/react";
+import { Button, ColorMode, useColorMode } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
 
 interface IMenuItem {
   children: string;
   to: string;
+  colorMode: ColorMode;
 }
 
 export const MenuItem: React.FunctionComponent<IMenuItem> = ({
   children,
   to = "/",
+  colorMode
 }) => {
-  const { colorMode, toggleColorMode } = useColorMode();
 
   return (
-    <Link href={to} textDecorationColor={'white'}>
+    <Link to={to}>
       <Button
         display="block"
         fontSize="lg"

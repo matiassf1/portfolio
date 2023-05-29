@@ -1,14 +1,14 @@
-import { Box, Stack } from "@chakra-ui/react";
+import { Box, ColorMode, Stack } from "@chakra-ui/react";
 import React from "react";
 import { MenuItem } from "./MenuItem";
 import { useLocation } from "react-router-dom";
 
 interface IMenuLinks {
   isOpen: boolean;
+  colorMode: ColorMode;
 }
 
-export const MenuLinks: React.FunctionComponent<IMenuLinks> = ({ isOpen }) => {
-  const location = useLocation();
+export const MenuLinks: React.FunctionComponent<IMenuLinks> = ({ isOpen, colorMode }) => {
 
   return (
     <Box
@@ -22,9 +22,9 @@ export const MenuLinks: React.FunctionComponent<IMenuLinks> = ({ isOpen }) => {
         direction={["column", "row", "row", "row"]}
         pt={[3, 3, 0, 0]}
       >
-        <MenuItem to="/home">Home</MenuItem>
-        <MenuItem to="/about">About Me</MenuItem>
-        <MenuItem to="#projects">Projects</MenuItem>
+        <MenuItem colorMode={colorMode} to="/home">Home</MenuItem>
+        <MenuItem colorMode={colorMode} to="/about">About Me</MenuItem>
+        <MenuItem colorMode={colorMode} to="#projects">Projects</MenuItem>
       </Stack>
     </Box>
   );

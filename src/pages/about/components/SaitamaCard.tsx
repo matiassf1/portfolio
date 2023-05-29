@@ -11,7 +11,6 @@ export const SaitamaCard: React.FunctionComponent<ISaitamaCard> = ({
   return (
     <Box
       display={"grid"}
-      marginTop={'55px'}
       gridTemplateColumns={"40% auto"}
       w={["100%", "80%", "450px","450px"]}
       h={'300px'}
@@ -21,6 +20,7 @@ export const SaitamaCard: React.FunctionComponent<ISaitamaCard> = ({
       placeItems="center"
       rounded="xl"
       boxShadow={"2xl"}
+      marginX={'auto'}
     >
       <Box fill={"#A8A0D9"}>
         <svg viewBox="0 0 208 278" style={{ width: "17vh" }}>
@@ -101,7 +101,7 @@ export const SaitamaCard: React.FunctionComponent<ISaitamaCard> = ({
           </Box>
           <Box>
             <Text fontSize={"14px"} color={"white"}>
-              70 kg{" "}
+              61 kg{" "}
             </Text>
             <Text fontSize={"11px"} color={"#828FD9"}>
               Weight

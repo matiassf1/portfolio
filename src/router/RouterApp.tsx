@@ -1,4 +1,4 @@
-import React, { lazy, Suspense } from 'react';
+import { lazy, Suspense } from 'react';
 import { ChakraProvider, Box, ColorModeScript } from "@chakra-ui/react";
 import { Route, Routes, useLocation } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
@@ -7,7 +7,7 @@ import { Layout } from "../layout/Layout";
 
 const theme = extendTheme({
   config:{
-    initialColorMode: "ligth",
+    initialColorMode: "dark",
     useSystemColorMode: true
   },
   colors: {

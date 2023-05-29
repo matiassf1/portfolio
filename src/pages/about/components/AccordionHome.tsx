@@ -6,11 +6,10 @@ import {
   AccordionPanel,
   Box,
 } from "@chakra-ui/react";
-import React from "react";
 
 export const AccordionHome = () => {
   return (
-    <Accordion defaultIndex={[0]} allowMultiple>
+    <Accordion defaultIndex={[0]}>
       <AccordionItem>
         <h2>
           <AccordionButton>

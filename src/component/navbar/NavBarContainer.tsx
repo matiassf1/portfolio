@@ -1,13 +1,15 @@
-import { Flex, useColorMode } from "@chakra-ui/react";
+import { ColorMode, Flex, useColorMode } from "@chakra-ui/react";
 
 interface INavBarContainer {
     children: any;
+    colorMode: ColorMode;
+
 }
 
 
-export const NavBarContainer: React.FunctionComponent<INavBarContainer> = ({ children, ...props }) => {
-  const {colorMode, toggleColorMode} = useColorMode();
-
+export const NavBarContainer: React.FunctionComponent<INavBarContainer> = ({ children, colorMode, ...props }) => {
+    console.log(colorMode === 'dark' ? '#071A38' : 'white');
+    
     return (
       <Flex
         as="nav"
