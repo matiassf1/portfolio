@@ -1,4 +1,11 @@
-import { Box, ScaleFade, Heading, useColorMode, Text, Button } from "@chakra-ui/react";
+import {
+  Box,
+  ScaleFade,
+  Heading,
+  useColorMode,
+  Text,
+  Button,
+} from "@chakra-ui/react";
 import { useRef } from "react";
 import { useInViewport } from "react-in-viewport";
 import { SaitamaCard, MyStack, AccordionHome, Cards } from "./components";
@@ -13,7 +20,6 @@ const AboutPage = () => {
     { disconnectOnLeave: false },
     {}
   );
-  
 
   return (
     <>
@@ -28,7 +34,7 @@ const AboutPage = () => {
 
       <Cards />
 
-      <Box marginTop={'50px'}>
+      <Box marginTop={"50px"}>
         <Button>Checkout My Resume</Button>
       </Box>
 
@@ -44,7 +50,7 @@ const AboutPage = () => {
           flexDirection={["column", "column", "row", "row"]}
           marginBottom="50px"
         >
-          <Box display={'flex'} alignItems={'center'}>
+          <Box display={"flex"} alignItems={"center"}>
             <Box
               margin={"30px"}
               marginTop={0}
@@ -52,10 +58,11 @@ const AboutPage = () => {
               flexDirection={"column"}
               gap={"5"}
             >
+
               <SaitamaCard />
               <AccordionHome />
             </Box>
-            <MyStack />
+            
           </Box>
         </Box>
       </ScaleFade>

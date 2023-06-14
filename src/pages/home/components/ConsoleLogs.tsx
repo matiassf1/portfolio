@@ -1,9 +1,19 @@
 import { Code, Stack, useColorMode } from '@chakra-ui/react';
-import React from "react";
+import Swal from 'sweetalert2';
 
 export const ConsoleLogs = () => {
 
-  const {colorMode, toggleColorMode } = useColorMode()
+  const {colorMode, toggleColorMode } = useColorMode();
+
+  const handleWelcome = () => {
+    Swal.fire({
+      title: 'Welcome To My Portfolio!!',
+      width: 600,
+      padding: '3em',
+      color: '#716add',
+      background: '#fff url(/images/trees.png)',
+    })
+  }
 
   return (
     <Stack
@@ -16,6 +26,8 @@ export const ConsoleLogs = () => {
         colorScheme={colorMode == 'light' ? "tertiary" : "blue"}
         textColor={"white"}
         children="console.warn(welcome!!)"
+        style={{ cursor:'pointer' }}
+        onClick={handleWelcome}
       />
       <Code
         colorScheme={colorMode == 'light' ? "secondary" : "purple"}

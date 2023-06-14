@@ -287,7 +287,9 @@ html .btn:after {
       transform: translateY(50%); }
 
 .btn-9 {
-  color: #968781; }
+  color: #968781;
+  border-radius: 80% 0 80% 0;
+ }
   .btn-9:before, .btn-9:after,
   .btn-9 span:before,
   .btn-9 span:after {
@@ -316,7 +318,9 @@ html .btn:after {
     background-color: #83726b; }
 
 .btn-10 {
-  color: #c692cb; }
+  color: #c692cb;
+  border-radius: 80% 0 80% 0;
+ }
   .btn-10:before, .btn-10:after,
   .btn-10 span:before,
   .btn-10 span:after {
@@ -388,7 +392,7 @@ html .btn:after {
     transform: translate(50%, -50%); }
   .btn-11:hover {
     color: #9ebac5; 
-    border-width: 0;}
+    border-width: 1;}
     .btn-11:hover:before {
       animation: criss-cross-left 0.8s both;
       animation-direction: alternate; }

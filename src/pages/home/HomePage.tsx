@@ -9,13 +9,14 @@ import {
 
 import "../../styles/ssvg.css";
 import BlinkingText from "../../component/BlinkingText";
+import Projects from '../projects/Projects';
 
 interface IHomePage {}
 
 const HomePage: React.FunctionComponent<IHomePage> = () => {
   const scroll = () => {
     window?.scrollTo({
-      top: 650,
+      top: 685,
       behavior: "smooth",
     });
   };
@@ -83,6 +84,7 @@ const HomePage: React.FunctionComponent<IHomePage> = () => {
 
         <Box id="projects">
           <Heading fontFamily='monospace' textAlign={"center"}>Projects</Heading>
+          <Projects />
 {/* 
           REVISAR
           <Carrousel>

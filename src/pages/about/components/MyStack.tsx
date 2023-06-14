@@ -1,41 +1,61 @@
-import { Box, Flex, Img, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Flex,
+  Img,
+  ResponsiveValue,
+  Stack,
+  Text,
+  useBreakpointValue,
+  Heading,
+} from "@chakra-ui/react";
 import React, { useEffect, useRef } from "react";
 import { motion, useAnimation } from "framer-motion";
+import { Property } from "csstype";
 import * as image from "../../../assets/images";
 
 interface IMyStack {}
 
+interface BlockData {
+  src: string;
+  fit?: ResponsiveValue<Property.ObjectFit>;
+  text?: string;
+}
+
 export const MyStack: React.FunctionComponent<IMyStack> = () => {
   const containerReactRef = useRef<HTMLDivElement>(null);
-  const blockData = [
+  const blockData: BlockData[] = [
     {
       src: image.default.css,
+      fit: ["cover", "fill"],
     },
     {
       src: image.default.tailwind,
+      fit: ["cover", "cover"],
     },
     {
       src: image.default.bootstrap,
+      fit: ["cover", "fill"],
     },
     {
       src: image.default.javascript,
+      fit: ["cover", "fill"],
     },
     {
       src: image.default.react,
+      fit: ["cover", "cover"],
     },
     {
       src: image.default.typescript,
+      fit: ["cover", "fill"],
     },
     {
       src: image.default.html,
+      fit: ["cover", "fill"],
     },
     {
       src: image.default.apirest,
-    },
-    {
-      src: image.default.nodejs,
-      text: 'Learning Node.js & Express'
-    },
+      fit: ["cover", "fill"],
+    }
   ];
 
   const controls = useAnimation();
@@ -59,80 +79,67 @@ export const MyStack: React.FunctionComponent<IMyStack> = () => {
     }));
   }, []);
 
+  const isMobile = useBreakpointValue({ base: true, md: false });
+
   return (
-    <Flex
-      color="white"
-      direction="column"
-      alignItems="flex-end"
-      justify="center"
-      placeContent="center"
-      placeItems="center"
-      margin={'10px'}
-      marginTop={0}
-      w={["80%", "80%", "auto", "auto"]}
-    >
-      <Box background="#303240" mt="60px" p={4} rounded="xl">
+    <>
+      <Heading
+        fontFamily="monospace"
+        fontSize={"2xl"}
+        textAlign={"start"}
+        marginTop={"35px"}
+      >
+        My stack
+      </Heading>
+      <Flex color="white" placeContent="center" w="100%">
         <Box
-          position="relative"
-          display="flex"
+          display={isMobile ? "none" : "flex"}
           flexDirection="column"
+          mt={"5px"}
+          p={4}
           justifyContent="center"
           alignItems="center"
-          h="100%"
-          w={{ base: "80px", md: "100px" }}
+          background="#152f44"
+          rounded="xl"
         >
           <motion.div
+            ref={containerReactRef}
             style={{
               opacity: "1",
-              background: "#303240",
               height: "100%",
               width: "100%",
-              borderRadius: "20px",
             }}
-            ref={containerReactRef}
           />
-          {blockData.map((block, index) => (
-            <motion.div
-              key={index}
-              style={{
-                position: "relative",
-                opacity: 0,
-                marginBottom:'10px'
-              }}
-              initial={false}
-              animate={controls}
-              custom={index}
-              whileHover={{ scale: 1.1 }}
-            >
-              <Img
+          <Stack direction={"row"} spacing={2} alignItems="center" mt={0}>
+            {blockData.map(({ src, fit, text }, index) => (
+              <motion.div
+                key={index}
                 style={{
                   position: "relative",
-                  borderRadius: "20px",
+                  opacity: 0,
+                  marginBottom: "10px",
+                  flexBasis: "auto",
                 }}
-                boxSize={["50px", "75px"]}
-                objectFit="cover"
-                draggable="false"
-                src={block.src}
-              />
-              {block.text && (
-                <Text
-                  position="absolute"
-                  bottom="13%"
-                  fontSize="xs"
-                  fontWeight='bold'
-                  background={'black'}
-                  rounded="3xl"
-                  opacity='0.7'
-                  align="center"
-                  color='white'
-                >
-                  {block.text}
-                </Text>
-              )}
-            </motion.div>
-          ))}
+                initial={false}
+                animate={controls}
+                custom={index}
+                whileHover={{ scale: 1.1 }}
+              >
+                <Img
+                  style={{
+                    position: "relative",
+                    borderRadius: "20px",
+                  }}
+                  boxSize={["75px", "80px"]}
+                  objectFit={fit}
+                  draggable="false"
+                  src={src}
+                />
+              </motion.div>
+            ))}
+          </Stack>
         </Box>
-      </Box>
-    </Flex>
+      </Flex>
+    </>
   );
 };
